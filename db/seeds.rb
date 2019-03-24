@@ -15,8 +15,8 @@ t2.players.create(firstname: 'Bob', lastname: 'Fren', nationality: 'Germany', po
 t1.coaches.create(firstname: 'Alice', lastname: 'Champ') 
 t2.coaches.create(firstname: 'Kim', lastname: 'King')
 
-t1.owners.create(firstname: 'Taksin', lastname: 'Mann') 
-t2.owners.create(firstname: 'Jane', lastname: 'Smith') 
+# t1.owners.create(firstname: 'Taksin', lastname: 'Mann') 
+# t2.owners.create(firstname: 'Jane', lastname: 'Smith') 
 
 t1.managers.create(firstname: 'Jonathan', lastname: 'Crosby') 
 t2.managers.create(firstname: 'Fred', lastname: 'Williams') 
