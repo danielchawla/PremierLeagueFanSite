@@ -12,8 +12,8 @@
 
 <p>
   <strong>Team:</strong>
-  <%= @owner.team %>
+  <%= @owner.team.fullname %>
 </p>
 
 <%= link_to 'Edit', edit_owner_path(@owner) %> |
-<%= link_to 'Back', owners_path %>
+<%= link_to 'Back', team_owners_path(@owner.team) %>

@@ -1,4 +1,4 @@
-<%= form_with(model: @parent, url: @player.new_record? ? team_players_path : player, local: true) do |form| %>
+<%= form_with(model: @player, url: @player.new_record? ? team_players_path : player, local: true) do |form| %>
   <% if player.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(player.errors.count, "error") %> prohibited this player from being saved:</h2>

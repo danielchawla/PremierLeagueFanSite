@@ -3,4 +3,4 @@
 <%= render 'form', coach: @coach %>
 
 <%= link_to 'Show', @coach %> |
-<%= link_to 'Back', coaches_path %>
+<%= link_to 'Back', team_coaches_path(@coach.team) %>

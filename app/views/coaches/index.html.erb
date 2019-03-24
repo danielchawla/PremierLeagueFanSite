@@ -17,7 +17,7 @@
       <tr>
         <td><%= coach.firstname %></td>
         <td><%= coach.lastname %></td>
-        <td><%= coach.team %></td>
+        <td><%= coach.team.fullname %></td>
         <td><%= link_to 'Show', coach %></td>
         <td><%= link_to 'Edit', edit_coach_path(coach) %></td>
         <td><%= link_to 'Destroy', coach, method: :delete, data: { confirm: 'Are you sure?' } %></td>
@@ -28,4 +28,4 @@
 
 <br>
 
-<%= link_to 'New Coach', new_coach_path %>
+<%= link_to 'New Coach', new_team_coach_path %>

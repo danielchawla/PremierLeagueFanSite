@@ -17,7 +17,7 @@
       <tr>
         <td><%= owner.firstname %></td>
         <td><%= owner.lastname %></td>
-        <td><%= owner.team %></td>
+        <td><%= owner.team.fullname %></td>
         <td><%= link_to 'Show', owner %></td>
         <td><%= link_to 'Edit', edit_owner_path(owner) %></td>
         <td><%= link_to 'Destroy', owner, method: :delete, data: { confirm: 'Are you sure?' } %></td>
@@ -28,4 +28,4 @@
 
 <br>
 
-<%= link_to 'New Owner', new_owner_path %>
+<%= link_to 'New Owner', new_team_owner_path %>

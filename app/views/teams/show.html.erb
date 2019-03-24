@@ -22,3 +22,8 @@
 
 <%= link_to 'Edit', edit_team_path(@team) %> |
 <%= link_to 'Back', teams_path %>
+<p>
+<%= link_to 'Players', team_players_path(@team) %> |
+<%= link_to 'Coaches', team_coaches_path(@team) %> |
+<%= link_to 'Managers', team_managers_path(@team) %> |
+<%= link_to 'Owners', team_owners_path(@team) %>
