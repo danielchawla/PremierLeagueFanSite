@@ -56,7 +56,7 @@ class VotesController < ApplicationController
   def destroy
     @vote.destroy
     respond_to do |format|
-      format.html { redirect_to votes_url, notice: 'Vote was successfully destroyed.' }
+      format.html { redirect_to root_path, notice: 'Vote was successfully destroyed.' }
       format.json { head :no_content }
     end
   end

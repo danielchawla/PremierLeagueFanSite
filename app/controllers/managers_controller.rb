@@ -56,7 +56,7 @@ class ManagersController < ApplicationController
   def destroy
     @manager.destroy
     respond_to do |format|
-      format.html { redirect_to managers_url, notice: 'Manager was successfully destroyed.' }
+      format.html { redirect_to root_path, notice: 'Manager was successfully destroyed.' }
       format.json { head :no_content }
     end
   end

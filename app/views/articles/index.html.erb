@@ -15,19 +15,22 @@
 
   <tbody>
     <% @articles.each do |article| %>
-      <tr>
-        <td><%= article.title %></td>
-        <td><%= article.articletext %></td>
-        <td><%= article.timeposted %></td>
-        <td><%= article.team %></td>
-        <td><%= link_to 'Show', article %></td>
-        <td><%= link_to 'Edit', edit_article_path(article) %></td>
-        <td><%= link_to 'Destroy', article, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
+      <% if article.team_id == params{1}["team_id"].to_i %>
+        <tr>
+          <td><%= article.title %></td>
+          <td><%= article.articletext %></td>
+          <td><%= article.timeposted %></td>
+          <td><%= article.team.fullname %></td>
+          <td><%= link_to 'Show', article %></td>
+          <td><%= link_to 'Edit', edit_article_path(article) %></td>
+          <td><%= link_to 'Destroy', article, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        </tr>
+        <% end %>
     <% end %>
   </tbody>
 </table>
 
 <br>
 
-<%= link_to 'New Article', new_article_path %>
+<%= link_to 'New Article', new_team_article_path %> |
+<%= link_to 'Back to Teams', teams_path %>
