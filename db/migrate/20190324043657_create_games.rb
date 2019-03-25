@@ -6,7 +6,7 @@ class CreateGames < ActiveRecord::Migration[5.2]
       t.date :gamedate, null: false
       t.references :hometeam, null: false
       t.references :awayteam, null: false
-      t.references :winningteam, null: false
+      t.references :winningteam
 
       t.timestamps
     end
