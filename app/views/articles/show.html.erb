@@ -1,0 +1,23 @@
+
+<p>
+  <strong>Title:</strong>
+  <%= @article.title %>
+</p>
+
+<p>
+  <strong>Articletext:</strong>
+  <%= @article.articletext %>
+</p>
+
+<p>
+  <strong>Timeposted:</strong>
+  <%= @article.timeposted %>
+</p>
+
+<p>
+  <strong>Team:</strong>
+  <%= @article.team.fullname %>
+</p>
+
+<%= link_to 'Edit', edit_article_path(@article), class: 'btn btn-primary' %> 
+<%= link_to 'Back', team_articles_path(@article.team), class: 'btn btn-primary' %>

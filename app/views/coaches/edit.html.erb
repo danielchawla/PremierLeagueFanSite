@@ -1,0 +1,6 @@
+<h1>Editing Coach</h1>
+
+<%= render 'form', coach: @coach %>
+
+<%= link_to 'Show', @coach, class: 'btn btn-primary' %> 
+<%= link_to 'Back', team_coaches_path(@coach.team), class: 'btn btn-primary' %>

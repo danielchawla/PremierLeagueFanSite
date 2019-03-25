@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  awayteamscore: 1
+  hometeamscore: 1
+  gamedate: 
+  hometeam: one
+  awayteam: one
+  winningteam: one
+
+two:
+  awayteamscore: 1
+  hometeamscore: 1
+  gamedate: 
+  hometeam: two
+  awayteam: two
+  winningteam: two

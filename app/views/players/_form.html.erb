@@ -1,0 +1,53 @@
+<%= form_with(model: @player, url: @player.new_record? ? team_players_path : player, local: true) do |form| %>
+  <% if player.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(player.errors.count, "error") %> prohibited this player from being saved:</h2>
+
+      <ul>
+      <% player.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :firstname %>
+    <%= form.text_field :firstname %>
+  </div>
+
+  <div class="field">
+    <%= form.label :lastname %>
+    <%= form.text_field :lastname %>
+  </div>
+
+  <div class="field">
+    <%= form.label :nationality %>
+    <%= form.text_field :nationality %>
+  </div>
+
+  <div class="field">
+    <%= form.label :position %>
+    <%= form.text_field :position %>
+  </div>
+
+  <div class="field">
+    <%= form.label :yearsofexperience %>
+    <%= form.number_field :yearsofexperience %>
+  </div>
+
+  <div class="field">
+    <%= form.label :salary %>
+    <%= form.number_field :salary %>
+  </div>
+
+  <div class="select">
+    <%= form.label :team_id %>
+    <% form.text_field :team_id %>
+    <%= form.collection_select(:team_id, Team.all, :id, :full_name) %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

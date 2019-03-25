@@ -1,0 +1,18 @@
+
+<p>
+  <strong>Firstname:</strong>
+  <%= @manager.firstname %>
+</p>
+
+<p>
+  <strong>Lastname:</strong>
+  <%= @manager.lastname %>
+</p>
+
+<p>
+  <strong>Team:</strong>
+  <%= @manager.team.fullname %>
+</p>
+
+<%= link_to 'Edit', edit_manager_path(@manager), class: 'btn btn-primary' %> 
+<%= link_to 'Back', team_managers_path(@manager.team), class: 'btn btn-primary' %>

@@ -1,0 +1,6 @@
+<h1>Editing Article</h1>
+
+<%= render 'form', article: @article %>
+
+<%= link_to 'Show', @article, class: 'btn btn-primary' %> 
+<%= link_to 'Back', team_articles_path(@article.team), class: 'btn btn-primary' %>
