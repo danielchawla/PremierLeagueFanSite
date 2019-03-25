@@ -6,7 +6,6 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-#   Team Creation
 t1 =  Team.create(shortname: 'ARS', fullname: 'Arsenal', yearfounded: 1886, budget: 100000000)
 t2 =  Team.create(shortname: 'EVE', fullname: 'Everton', yearfounded: 1878, budget: 105060200)
 t3 =  Team.create(shortname: 'AFCB', fullname: 'AFC Bournemouth', yearfounded: 1899, budget: 0)
@@ -73,26 +72,29 @@ t19.coaches.create(firstname: 'Place', lastname: 'Holder')
 t20.coaches.create(firstname: 'Place', lastname: 'Holder')
 
 #   Owners Creation
-t1.owners.create(firstname: 'Taksin', lastname: 'Mann') 
-t2.owners.create(firstname: 'Jane', lastname: 'Smith') 
-t3.owners.create(firstname: 'Place', lastname: 'Holder')
-t4.owners.create(firstname: 'Place', lastname: 'Holder')
-t5.owners.create(firstname: 'Place', lastname: 'Holder')
-t6.owners.create(firstname: 'Place', lastname: 'Holder')
-t7.owners.create(firstname: 'Place', lastname: 'Holder')
-t8.owners.create(firstname: 'Place', lastname: 'Holder')
-t9.owners.create(firstname: 'Place', lastname: 'Holder')
-t10.owners.create(firstname: 'Place', lastname: 'Holder')
-t11.owners.create(firstname: 'Place', lastname: 'Holder')
-t12.owners.create(firstname: 'Place', lastname: 'Holder')
-t13.owners.create(firstname: 'Place', lastname: 'Holder')
-t14.owners.create(firstname: 'Place', lastname: 'Holder')
-t15.owners.create(firstname: 'Place', lastname: 'Holder')
-t16.owners.create(firstname: 'Place', lastname: 'Holder')
-t17.owners.create(firstname: 'Place', lastname: 'Holder')
-t18.owners.create(firstname: 'Place', lastname: 'Holder')
-t19.owners.create(firstname: 'Place', lastname: 'Holder')
-t20.owners.create(firstname: 'Place', lastname: 'Holder')
+# Note: a team can only have one owner. 
+# Because of the "has_one" relationship, owners are created using 
+# the slightly different format demonstrated below
+t1.owner = Owner.create(firstname: 'Taksin', lastname: 'Mann') 
+t2.owner = Owner.create(firstname: 'Jane', lastname: 'Smith') 
+t3.owner = Owner.create(firstname: 'Place', lastname: 'Holder')
+t4.owner = Owner.create(firstname: 'Place', lastname: 'Holder')
+t5.owner = Owner.create(firstname: 'Place', lastname: 'Holder')
+t6.owner = Owner.create(firstname: 'Place', lastname: 'Holder')
+t7.owner = Owner.create(firstname: 'Place', lastname: 'Holder')
+t8.owner = Owner.create(firstname: 'Place', lastname: 'Holder')
+t9.owner = Owner.create(firstname: 'Place', lastname: 'Holder')
+t10.owner = Owner.create(firstname: 'Place', lastname: 'Holder')
+t11.owner = Owner.create(firstname: 'Place', lastname: 'Holder')
+t12.owner = Owner.create(firstname: 'Place', lastname: 'Holder')
+t13.owner = Owner.create(firstname: 'Place', lastname: 'Holder')
+t14.owner = Owner.create(firstname: 'Place', lastname: 'Holder')
+t15.owner = Owner.create(firstname: 'Place', lastname: 'Holder')
+t16.owner = Owner.create(firstname: 'Place', lastname: 'Holder')
+t17.owner = Owner.create(firstname: 'Place', lastname: 'Holder')
+t18.owner = Owner.create(firstname: 'Place', lastname: 'Holder')
+t19.owner = Owner.create(firstname: 'Place', lastname: 'Holder')
+t20.owner = Owner.create(firstname: 'Place', lastname: 'Holder')
 
 #   Managers Creation
 t1.managers.create(firstname: 'Jonathan', lastname: 'Crosby') 
@@ -115,3 +117,17 @@ t17.managers.create(firstname: 'Place', lastname: 'Holder')
 t18.managers.create(firstname: 'Place', lastname: 'Holder')
 t19.managers.create(firstname: 'Place', lastname: 'Holder')
 t20.managers.create(firstname: 'Place', lastname: 'Holder')
+
+#   Games creation 
+# Note: this is a many to many relationship
+Game.create([
+	{awayteamscore: 2, hometeamscore: 1, gamedate: '05-12-2018', hometeam_id: t1.id, awayteam_id: t2.id, winningteam_id: t2.id},
+	{awayteamscore: 3, hometeamscore: 3, gamedate: '06-01-2018', hometeam_id: t3.id, awayteam_id: t6.id, winningteam_id: nil}, # tie game so no winning team
+	{awayteamscore: 1, hometeamscore: 0, gamedate: '06-01-2018', hometeam_id: t4.id, awayteam_id: t7.id, winningteam_id: t4.id} 
+]) # DON'T FORGET: add commas between each game entry. last one doesn't need it
+
+#   Articles creation 
+t1.articles.create(title: 'Arsenal loses to Everton', articletext: 'On May 12, 2018, Arsenal lost 2-1 to Everton', timeposted: '2019-03-25 06:59:00') 
+t2.articles.create(title: 'Everton wins against Arsenal', articletext: 'On May 12, 2018, Even won 2-1 to Arsenal', timeposted: '2019-03-25 06:59:00')
+
+

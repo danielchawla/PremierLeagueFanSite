@@ -5,12 +5,12 @@
 <table>
   <thead>
     <tr>
-      <th>Awayteamscore</th>
-      <th>Hometeamscore</th>
-      <th>Gamedate</th>
       <th>Hometeam</th>
       <th>Awayteam</th>
       <th>Winningteam</th>
+      <th>Awayteamscore</th>
+      <th>Hometeamscore</th>
+      <th>Gamedate</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -18,12 +18,16 @@
   <tbody>
     <% @games.each do |game| %>
       <tr>
+        <td><%= game.hometeam.fullname %></td>
+        <td><%= game.awayteam.fullname %></td>
+        <% if game.winningteam %>
+          <td><%= game.winningteam.fullname %></td>
+        <% else %>
+          <td><%= 'None' %></td>
+        <% end %>
         <td><%= game.awayteamscore %></td>
         <td><%= game.hometeamscore %></td>
         <td><%= game.gamedate %></td>
-        <td><%= game.hometeam %></td>
-        <td><%= game.awayteam %></td>
-        <td><%= game.winningteam %></td>
         <td><%= link_to 'Show', game %></td>
         <td><%= link_to 'Edit', edit_game_path(game) %></td>
         <td><%= link_to 'Destroy', game, method: :delete, data: { confirm: 'Are you sure?' } %></td>

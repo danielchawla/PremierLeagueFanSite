@@ -12,8 +12,13 @@
   <% end %>
 
   <div class="field">
-    <%= form.label :awayteamscore %>
-    <%= form.number_field :awayteamscore %>
+    <%= form.label :hometeam_id %>
+    <%= form.collection_select(:hometeam_id, Team.all, :id, :full_name) %>
+  </div>
+
+  <div class="field">
+    <%= form.label :awayteam_id %>
+    <%= form.collection_select(:awayteam_id, Team.all, :id, :full_name) %>
   </div>
 
   <div class="field">
@@ -21,25 +26,17 @@
     <%= form.number_field :hometeamscore %>
   </div>
 
+    <div class="field">
+    <%= form.label :awayteamscore %>
+    <%= form.number_field :awayteamscore %>
+  </div>
+
   <div class="field">
     <%= form.label :gamedate %>
-    <%= form.text_field :gamedate %>
+    <%= form.date_field :gamedate %>
   </div>
 
-  <div class="field">
-    <%= form.label :hometeam_id %>
-    <%= form.text_field :hometeam_id %>
-  </div>
 
-  <div class="field">
-    <%= form.label :awayteam_id %>
-    <%= form.text_field :awayteam_id %>
-  </div>
-
-  <div class="field">
-    <%= form.label :winningteam_id %>
-    <%= form.text_field :winningteam_id %>
-  </div>
 
   <div class="actions">
     <%= form.submit %>

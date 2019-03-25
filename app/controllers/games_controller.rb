@@ -26,13 +26,26 @@ class GamesController < ApplicationController
   def create
     @game = Game.new(game_params)
 
+    if (@game.hometeamscore > @game.awayteamscore)
+      @game.winningteam = @game.hometeam
+    elsif (@game.hometeamscore < @game.awayteamscore)
+      @game.winningteam = @game.awayteam
+    else 
+      @game.winningteam = nil
+    end
+    
     respond_to do |format|
-      if @game.save
-        format.html { redirect_to @game, notice: 'Game was successfully created.' }
-        format.json { render :show, status: :created, location: @game }
-      else
-        format.html { render :new }
+      if (@game.hometeam == @game.awayteam)
+        format.html { redirect_to new_game_path, notice: 'Home team must be different from Away team' }
         format.json { render json: @game.errors, status: :unprocessable_entity }
+      else
+        if @game.save
+          format.html { redirect_to @game, notice: 'Game was successfully created.' }
+          format.json { render :show, status: :created, location: @game }
+        else
+          format.html { render :new }
+          format.json { render json: @game.errors, status: :unprocessable_entity }
+        end
       end
     end
   end
@@ -69,6 +82,6 @@ class GamesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def game_params
-      params.require(:game).permit(:awayteamscore, :hometeamscore, :gamedate, :hometeam_id, :awayteam_id, :winningteam_id)
+      params.require(:game).permit(:awayteamscore, :hometeamscore, :gamedate, :hometeam_id, :awayteam_id)
     end
 end

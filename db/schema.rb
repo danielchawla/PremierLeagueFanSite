@@ -48,7 +48,7 @@ ActiveRecord::Schema.define(version: 2019_03_24_045654) do
     t.date "gamedate", null: false
     t.integer "hometeam_id", null: false
     t.integer "awayteam_id", null: false
-    t.integer "winningteam_id", null: false
+    t.integer "winningteam_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["awayteam_id"], name: "index_games_on_awayteam_id"
