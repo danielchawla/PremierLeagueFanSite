@@ -29,6 +29,21 @@ t20 = Team.create(shortname: 'WQL', fullname: 'Wolverhampton Wanderers', yearfou
 
 #   Players Creation
 t1.players.create(firstname: 'Petr', lastname: 'Cech', nationality: 'Czech Republic', position: 'Goalkeeper', yearsofexperience: '4', salary: '100000') 
+t1.players.create(firstname: 'Bernd', lastname: 'Leno', nationality: 'Germany', position: 'Goalkeeper', yearsofexperience: '2', salary: '10000') 
+t1.players.create(firstname: 'Hector', lastname: 'Bellerin', nationality: 'Spain', position: 'Defender', yearsofexperience: '1', salary: '50000') 
+t1.players.create(firstname: 'Igor', lastname: 'Sokratis', nationality: 'Greece', position: 'Defender', yearsofexperience: '3', salary: '150000') 
+t1.players.create(firstname: 'Laurent', lastname: 'Koscielny', nationality: 'France', position: 'Defender', yearsofexperience: '2', salary: '20000') 
+t1.players.create(firstname: 'Stephan', lastname: 'Lichtsteiner', nationality: 'Switzerland', position: 'Defender', yearsofexperience: '6', salary: '350000') 
+t1.players.create(firstname: 'Mohamed', lastname: 'Elneny', nationality: 'Egypt', position: 'Midfielder', yearsofexperience: '4', salary: '350000') 
+t1.players.create(firstname: 'Henrikh', lastname: 'Mkhitaryan', nationality: 'Armenia', position: 'Midfielder', yearsofexperience: '4', salary: '60000') 
+t1.players.create(firstname: 'Aaron', lastname: 'Ramsey', nationality: 'Wales', position: 'Midfielder', yearsofexperience: '7', salary: '850000') 
+t1.players.create(firstname: 'Mesut', lastname: 'Ozil', nationality: 'Germany', position: 'Midfielder', yearsofexperience: '3', salary: '350000') 
+t1.players.create(firstname: 'Alexandre', lastname: 'Lacazette', nationality: 'France', position: 'Forward', yearsofexperience: '3', salary: '150000') 
+t1.players.create(firstname: 'Pierre-Emerick', lastname: 'Aubameyang', nationality: 'Gabon', position: 'Forward', yearsofexperience: '2', salary: '150000') 
+t1.players.create(firstname: 'Alex', lastname: 'Iwobi', nationality: 'Nigeria', position: 'Forward', yearsofexperience: '1', salary: '100000') 
+t1.players.create(firstname: 'Danny', lastname: 'Welbeck', nationality: 'England', position: 'Forward', yearsofexperience: '3', salary: '230000') 
+t1.players.create(firstname: 'Takuma', lastname: 'Asano', nationality: 'Japan', position: 'On Loan', yearsofexperience: '1', salary: '10000') 
+
 t2.players.create(firstname: 'Bob', lastname: 'Fren', nationality: 'Germany', position: 'Forward', yearsofexperience: '12', salary: '120322') 
 t3.players.create(firstname: 'Steve', lastname: 'Cook', nationality: 'England', position: 'Defender', yearsofexperience: '4', salary: '0') 
 t4.players.create(firstname: 'Mat', lastname: 'Ryan', nationality: 'Australia', position: 'Goalkeeper', yearsofexperience: '2', salary: '0') 
