@@ -126,5 +126,8 @@ Game.create([
 	{awayteamscore: 1, hometeamscore: 0, gamedate: '06-01-2018', hometeam_id: t4.id, awayteam_id: t7.id, winningteam_id: t4.id} 
 ]) # DON'T FORGET: add commas between each game entry. last one doesn't need it
 
+#   Articles creation 
+t1.articles.create(title: 'Arsenal loses to Everton', articletext: 'On May 12, 2018, Arsenal lost 2-1 to Everton', timeposted: '2019-03-25 06:59:00') 
+t2.articles.create(title: 'Everton wins against Arsenal', articletext: 'On May 12, 2018, Even won 2-1 to Arsenal', timeposted: '2019-03-25 06:59:00')
 
 
