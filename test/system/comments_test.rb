@@ -14,10 +14,9 @@ class CommentsTest < ApplicationSystemTestCase
     visit comments_url
     click_on "New Comment"
 
+    fill_in "App user", with: @comment.app_user_id
     fill_in "Article", with: @comment.article_id
-    fill_in "Comment", with: @comment.comment
-    fill_in "Email", with: @comment.email_id
-    fill_in "Timeposted", with: @comment.timeposted
+    fill_in "Body", with: @comment.body
     click_on "Create Comment"
 
     assert_text "Comment was successfully created"
@@ -28,10 +27,9 @@ class CommentsTest < ApplicationSystemTestCase
     visit comments_url
     click_on "Edit", match: :first
 
+    fill_in "App user", with: @comment.app_user_id
     fill_in "Article", with: @comment.article_id
-    fill_in "Comment", with: @comment.comment
-    fill_in "Email", with: @comment.email_id
-    fill_in "Timeposted", with: @comment.timeposted
+    fill_in "Body", with: @comment.body
     click_on "Update Comment"
 
     assert_text "Comment was successfully updated"

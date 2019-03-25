@@ -17,7 +17,7 @@ class CommentsControllerTest < ActionDispatch::IntegrationTest
 
   test "should create comment" do
     assert_difference('Comment.count') do
-      post comments_url, params: { comment: { article_id: @comment.article_id, comment: @comment.comment, email_id: @comment.email_id, timeposted: @comment.timeposted } }
+      post comments_url, params: { comment: { app_user_id: @comment.app_user_id, article_id: @comment.article_id, body: @comment.body } }
     end
 
     assert_redirected_to comment_url(Comment.last)
@@ -34,7 +34,7 @@ class CommentsControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update comment" do
-    patch comment_url(@comment), params: { comment: { article_id: @comment.article_id, comment: @comment.comment, email_id: @comment.email_id, timeposted: @comment.timeposted } }
+    patch comment_url(@comment), params: { comment: { app_user_id: @comment.app_user_id, article_id: @comment.article_id, body: @comment.body } }
     assert_redirected_to comment_url(@comment)
   end
 
