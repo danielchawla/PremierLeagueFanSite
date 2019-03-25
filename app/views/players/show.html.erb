@@ -1,4 +1,3 @@
-<p id="notice"><%= notice %></p>
 
 <p>
   <strong>Firstname:</strong>
@@ -34,5 +33,5 @@
   <%= @player.team.fullname %>
 </p>
 
-<%= link_to 'Edit', edit_player_path(@player) %> |
-<%= link_to 'Back', team_players_path(@player.team) %>
+<%= link_to 'Edit', edit_player_path(@player), class: 'btn btn-primary' %> 
+<%= link_to 'Back', team_players_path(@player.team), class: 'btn btn-primary' %>

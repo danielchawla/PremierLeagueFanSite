@@ -1,8 +1,6 @@
-<p id="notice"><%= notice %></p>
-
 <h1>Teams</h1>
 
-<table>
+<table class="Table">
   <thead>
     <tr>
       <th>Shortname</th>
@@ -32,6 +30,5 @@
 
 <br>
 
-<%= link_to 'New Team', new_team_path %> 
-<p>
-<%= link_to 'See Games Played', games_path %> 
+<%= link_to 'New Team', new_team_path, class: 'btn btn-primary' %> 
+<%= link_to 'See Games Played', games_path, class: 'btn btn-primary' %> 
