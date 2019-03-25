@@ -127,7 +127,21 @@ Game.create([
 ]) # DON'T FORGET: add commas between each game entry. last one doesn't need it
 
 #   Articles creation 
-t1.articles.create(title: 'Arsenal loses to Everton', articletext: 'On May 12, 2018, Arsenal lost 2-1 to Everton', timeposted: '2019-03-25 06:59:00') 
-t2.articles.create(title: 'Everton wins against Arsenal', articletext: 'On May 12, 2018, Even won 2-1 to Arsenal', timeposted: '2019-03-25 06:59:00')
+a1 = t1.articles.create(title: 'Arsenal loses to Everton', articletext: 'On May 12, 2018, Arsenal lost 2-1 to Everton', timeposted: '2019-03-25 06:59:00') 
+a2 = t2.articles.create(title: 'Everton wins against Arsenal', articletext: 'On May 12, 2018, Even won 2-1 to Arsenal', timeposted: '2019-03-25 06:59:00')
+
+#   User creation
+u1 = AppUser.create! :email => 'admin@1.com', :password => '123456', :password_confirmation => '123456', :admin => true
+u2 = AppUser.create! :email => 'john@2.com', :password => '123456', :password_confirmation => '123456', :admin => false
+u3 = AppUser.create! :email => 'sarah@2.com', :password => '123456', :password_confirmation => '123456', :admin => false
+
+#   Comment creation 
+# Note: this is a many to many relationship
+Comment.create([
+	{body: 'Go Arsenal!', article_id: t2.id, app_user_id: u2.id},
+	{body: 'So sad :\'(', article_id: t2.id, app_user_id: u3.id},
+	{body: 'Go Everton!', article_id: t1.id, app_user_id: u3.id},
+	{body: 'So sad :\'(', article_id: t1.id, app_user_id: u2.id}
+]) # DON'T FORGET: add commas between each game entry. last one doesn't need it
 
 
