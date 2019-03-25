@@ -117,3 +117,14 @@ t17.managers.create(firstname: 'Place', lastname: 'Holder')
 t18.managers.create(firstname: 'Place', lastname: 'Holder')
 t19.managers.create(firstname: 'Place', lastname: 'Holder')
 t20.managers.create(firstname: 'Place', lastname: 'Holder')
+
+#   Games creation 
+# Note: this is a many to many relationship
+Game.create([
+	{awayteamscore: 2, hometeamscore: 1, gamedate: '05-12-2018', hometeam_id: t1.id, awayteam_id: t2.id, winningteam_id: t2.id},
+	{awayteamscore: 3, hometeamscore: 3, gamedate: '06-01-2018', hometeam_id: t3.id, awayteam_id: t6.id, winningteam_id: nil}, # tie game so no winning team
+	{awayteamscore: 1, hometeamscore: 0, gamedate: '06-01-2018', hometeam_id: t4.id, awayteam_id: t7.id, winningteam_id: t4.id} 
+]) # DON'T FORGET: add commas between each game entry. last one doesn't need it
+
+
+
