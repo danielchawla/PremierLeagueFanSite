@@ -2,7 +2,7 @@
 
 <h1>Articles</h1>
 
-<table>
+<table class="Table">
   <thead>
     <tr>
       <th>Title</th>
@@ -32,5 +32,5 @@
 
 <br>
 
-<%= link_to 'New Article', new_team_article_path %> |
-<%= link_to 'Back to Teams', teams_path %>
+<%= link_to 'New Article', new_team_article_path, class: 'btn btn-primary' %> 
+<%= link_to 'Back to Teams', teams_path, class: 'btn btn-primary' %>

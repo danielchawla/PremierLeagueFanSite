@@ -1,13 +1,11 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  comment: MyText
-  timeposted: 2019-03-23 21:52:18
-  email: one
+  body: MyText
   article: one
+  app_user: one
 
 two:
-  comment: MyText
-  timeposted: 2019-03-23 21:52:18
-  email: two
+  body: MyText
   article: two
+  app_user: two

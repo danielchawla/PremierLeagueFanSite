@@ -2,5 +2,5 @@
 
 <%= render 'form', owner: @owner %>
 
-<%= link_to 'Show', @owner %> |
-<%= link_to 'Back', team_owners_path(@owner.team) %>
+<%= link_to 'Show', @owner %>
+<%= link_to 'Back', team_owners_path(@owner.team), class: 'btn btn-primary' %>

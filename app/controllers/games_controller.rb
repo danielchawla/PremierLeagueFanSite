@@ -36,7 +36,7 @@ class GamesController < ApplicationController
     
     respond_to do |format|
       if (@game.hometeam == @game.awayteam)
-        format.html { redirect_to new_game_path, notice: 'Home team must be different from Away team' }
+        format.html { redirect_to new_game_path, alert: 'Home team must be different from Away team' }
         format.json { render json: @game.errors, status: :unprocessable_entity }
       else
         if @game.save

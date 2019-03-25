@@ -10,7 +10,20 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_03_24_045654) do
+ActiveRecord::Schema.define(version: 2019_03_25_171953) do
+
+  create_table "app_users", force: :cascade do |t|
+    t.string "email", default: "", null: false
+    t.string "encrypted_password", default: "", null: false
+    t.string "reset_password_token"
+    t.datetime "reset_password_sent_at"
+    t.datetime "remember_created_at"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.boolean "admin"
+    t.index ["email"], name: "index_app_users_on_email", unique: true
+    t.index ["reset_password_token"], name: "index_app_users_on_reset_password_token", unique: true
+  end
 
   create_table "articles", force: :cascade do |t|
     t.string "title", limit: 50, null: false
@@ -32,14 +45,13 @@ ActiveRecord::Schema.define(version: 2019_03_24_045654) do
   end
 
   create_table "comments", force: :cascade do |t|
-    t.text "comment", limit: 500
-    t.datetime "timeposted"
-    t.integer "email_id", null: false
+    t.text "body", null: false
     t.integer "article_id", null: false
+    t.integer "app_user_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["app_user_id"], name: "index_comments_on_app_user_id"
     t.index ["article_id"], name: "index_comments_on_article_id"
-    t.index ["email_id"], name: "index_comments_on_email_id"
   end
 
   create_table "games", force: :cascade do |t|
@@ -92,15 +104,6 @@ ActiveRecord::Schema.define(version: 2019_03_24_045654) do
     t.string "fullname", limit: 50, null: false
     t.integer "yearfounded", limit: 4
     t.integer "budget"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "users", id: false, force: :cascade do |t|
-    t.string "email", limit: 50, null: false
-    t.string "username", limit: 50, null: false
-    t.string "usertype", limit: 50, null: false
-    t.string "password", limit: 50, null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

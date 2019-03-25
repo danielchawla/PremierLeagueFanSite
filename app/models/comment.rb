@@ -1,4 +1,6 @@
 class Comment < ApplicationRecord
-  belongs_to :article, :foreign_key => 'email'
-  belongs_to :user
+  belongs_to :article
+  belongs_to :app_user
+
+  validates :body, presence: true, allow_blank: false
 end

@@ -1,4 +1,3 @@
-<p id="notice"><%= notice %></p>
 
 <p>
   <strong>Firstname:</strong>
@@ -15,5 +14,5 @@
   <%= @coach.team.fullname %>
 </p>
 
-<%= link_to 'Edit', edit_coach_path(@coach) %> |
-<%= link_to 'Back', team_coaches_path(@coach.team) %>
+<%= link_to 'Edit', edit_coach_path(@coach), class: 'btn btn-primary' %>
+<%= link_to 'Back', team_coaches_path(@coach.team), class: 'btn btn-primary' %>

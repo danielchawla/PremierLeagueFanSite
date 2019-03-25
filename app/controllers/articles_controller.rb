@@ -1,4 +1,10 @@
 class ArticlesController < ApplicationController
+  before_action :only => [:new, :create, :edit, :update, :destroy] do
+    if (! (current_app_user && current_app_user.admin) )
+      flash[:alert] = 'Only admins can access that functionality.' 
+      redirect_to(root_path)
+    end
+  end
   before_action :set_article, only: [:show, :edit, :update, :destroy]
 
   # GET /articles
@@ -10,6 +16,8 @@ class ArticlesController < ApplicationController
   # GET /articles/1
   # GET /articles/1.json
   def show
+    @comments = @article.comments.all
+    @comment = @article.comments.build
   end
 
   # GET /articles/new
