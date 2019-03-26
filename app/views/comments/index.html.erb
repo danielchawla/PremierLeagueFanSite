@@ -2,13 +2,12 @@
 
 <h1>Comments</h1>
 
-<table class="Table">
+<table>
   <thead>
     <tr>
-      <th>Comment</th>
-      <th>Timeposted</th>
-      <th>Email</th>
+      <th>Body</th>
       <th>Article</th>
+      <th>App user</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -16,10 +15,9 @@
   <tbody>
     <% @comments.each do |comment| %>
       <tr>
-        <td><%= comment.comment %></td>
-        <td><%= comment.timeposted %></td>
-        <td><%= comment.email %></td>
+        <td><%= comment.body %></td>
         <td><%= comment.article %></td>
+        <td><%= comment.app_user %></td>
         <td><%= link_to 'Show', comment %></td>
         <td><%= link_to 'Edit', edit_comment_path(comment) %></td>
         <td><%= link_to 'Destroy', comment, method: :delete, data: { confirm: 'Are you sure?' } %></td>
@@ -29,5 +27,3 @@
 </table>
 
 <br>
-
-<%= link_to 'New Comment', new_comment_path, class: 'btn btn-primary' %>

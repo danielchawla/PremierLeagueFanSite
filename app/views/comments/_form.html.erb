@@ -1,5 +1,5 @@
-<%= form_with(model: comment, local: true) do |form| %>
-  <% if comment.errors.any? %>
+<%= form_for([@article, @comment]) do |form| %>
+  <% if @comment.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(comment.errors.count, "error") %> prohibited this comment from being saved:</h2>
 
@@ -12,24 +12,10 @@
   <% end %>
 
   <div class="field">
-    <%= form.label :comment %>
-    <%= form.text_area :comment %>
+    <%= form.label :body %>
+    <%= form.text_area :body %>
   </div>
-
-  <div class="field">
-    <%= form.label :timeposted %>
-    <%= form.datetime_select :timeposted %>
-  </div>
-
-  <div class="field">
-    <%= form.label :email_id %>
-    <%= form.text_field :email_id %>
-  </div>
-
-  <div class="field">
-    <%= form.label :article_id %>
-    <%= form.text_field :article_id %>
-  </div>
+  <%= form.hidden_field :article_id %>
 
   <div class="actions">
     <%= form.submit %>
