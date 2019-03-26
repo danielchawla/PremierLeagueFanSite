@@ -8,6 +8,9 @@ class QueryController < ApplicationController
     	 	@keys = @results[1].keys
     	 	size = @results[1].keys.size / 2
     	 	@headers = @keys.slice(0,size-2)
+  	 	 else
+  	 	 	@headers = ["No results"]
+  	 	 	@results = [Results: 'None']
     	 end
   	else  
   		redirect_to(root_path, alert: "Query can't be empty") and return 
