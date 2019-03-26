@@ -28,9 +28,11 @@
 <p><i>This operation assumes the format: DivisorTable(x,y) / DividendTable(y)</i></p>
 <%= bootstrap_form_tag url: '/query/search' do |f| %>
   <%= f.select :divisor, [["app_users", :app_users], ["articles", :articles], ["coaches", :coaches], ["comments", :comments], ["games", :games], ["managers", :managers], ["owners", :owners], ["players", :players], ["teams", :teams] ], { label: "Divisor table (e.g. Find all the...)", wrapper: { class: 'has-warning', data: { foo: 'bar' } } }, { class: "selectpicker" } %>
-  <%= f.text_field :colx, label: "Column x in divisor table)", placeholder: "id" %>
+  <%= f.text_field :colx, label: "Column x in divisor table", placeholder: "id" %>
   <%= f.text_field :coly, label: "Column y in divisor table", placeholder: "id" %>
   <%= f.select :dividend, [["app_users", :app_users], ["articles", :articles], ["coaches", :coaches], ["comments", :comments], ["games", :games], ["managers", :managers], ["owners", :owners], ["players", :players], ["teams", :teams] ], { label: "Dividend table (e.g. who interacted with all the...)", wrapper: { class: 'has-warning', data: { foo: 'bar' } } }, { class: "selectpicker" } %>
    <%= f.text_field :coly2, label: "Column y in dividend table", placeholder: "id" %>
   <%= f.submit "Execute!" %>
 <% end %>
+<br>
+<p><i>For example, to find all teams that played as hometeams in every game use the following inputs: teams, id, id, games, hometeam_id </i></p>
