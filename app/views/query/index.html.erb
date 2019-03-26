@@ -1,0 +1,36 @@
+
+<div class="alert alert-primary" role="alert">
+  Enter advanced query into query executor above or use the simple query interface below
+</div>
+<br>
+<h3>Example Queries</h3>
+<ul class="list-group">
+  <li class="list-group-item">SELECT * FROM teams</li>
+  <li class="list-group-item">SELECT gamedate FROM games</li>
+  <li class="list-group-item">SELECT t.fullname AS winningteam FROM teams t INNER JOIN games g ON g.winningteam_id = t.id</li>
+  <li class="list-group-item">SELECT DISTINCT p.firstname, sum(g.hometeamscore) AS GoalsAsHomeTeam FROM players p, teams t, games g WHERE t.id = p.team_id AND t.id = g.hometeam_id GROUP BY p.firstname HAVING sum(g.hometeamscore) > 0</li>
+  <li class="list-group-item">DELETE FROM games where id = 1</li>
+</ul>
+<br>
+<h3>Simple Selection and Projection Query</h3>
+<br>
+
+<%= bootstrap_form_tag url: '/query/search' do |f| %>
+  <%= f.text_field :select, label: "SELECT", placeholder: "*" %>
+  <%= f.select :table, [["app_users", :app_users], ["articles", :articles], ["coaches", :coaches], ["comments", :comments], ["games", :games], ["managers", :managers], ["owners", :owners], ["players", :players], ["teams", :teams] ], { label: "FROM", wrapper: { class: 'has-warning', data: { foo: 'bar' } } }, { class: "selectpicker" } %>
+  <%= f.text_field :where, label: "WHERE", placeholder: "id > 2" %>
+  <%= f.submit "Execute!" %>
+<% end %>
+
+<br>
+<h3>Simple Division Query</h3>
+<br>
+<p><i>This operation assumes the format: DivisorTable(x,y) / DividendTable(y)</i></p>
+<%= bootstrap_form_tag url: '/query/search' do |f| %>
+  <%= f.select :divisor, [["app_users", :app_users], ["articles", :articles], ["coaches", :coaches], ["comments", :comments], ["games", :games], ["managers", :managers], ["owners", :owners], ["players", :players], ["teams", :teams] ], { label: "Divisor table (e.g. Find all the...)", wrapper: { class: 'has-warning', data: { foo: 'bar' } } }, { class: "selectpicker" } %>
+  <%= f.text_field :colx, label: "Column x in divisor table)", placeholder: "id" %>
+  <%= f.text_field :coly, label: "Column y in divisor table", placeholder: "id" %>
+  <%= f.select :dividend, [["app_users", :app_users], ["articles", :articles], ["coaches", :coaches], ["comments", :comments], ["games", :games], ["managers", :managers], ["owners", :owners], ["players", :players], ["teams", :teams] ], { label: "Dividend table (e.g. who interacted with all the...)", wrapper: { class: 'has-warning', data: { foo: 'bar' } } }, { class: "selectpicker" } %>
+   <%= f.text_field :coly2, label: "Column y in dividend table", placeholder: "id" %>
+  <%= f.submit "Execute!" %>
+<% end %>
