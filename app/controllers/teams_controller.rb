@@ -1,4 +1,10 @@
 class TeamsController < ApplicationController
+  before_action :only => [:new, :create, :edit, :update, :destroy] do
+    if (! (current_app_user && current_app_user.admin) )
+      flash[:alert] = 'Only admins can access that functionality.' 
+      redirect_to(root_path)
+    end
+  end
   before_action :set_team, only: [:show, :edit, :update, :destroy]
 
   # GET /teams

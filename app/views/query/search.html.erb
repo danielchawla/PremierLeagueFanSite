@@ -28,3 +28,11 @@
   </tbody>  
 </table>
 
+<h3>Example queries</h3>
+<ul class="list-group">
+  <li class="list-group-item">SELECT * FROM teams</li>
+  <li class="list-group-item">SELECT gamedate FROM games</li>
+  <li class="list-group-item">SELECT t.fullname AS winningteam FROM teams t INNER JOIN games g ON g.winningteam_id = t.id</li>
+  <li class="list-group-item">SELECT DISTINCT p.firstname, sum(g.hometeamscore) AS GoalsAsHomeTeam FROM players p, teams t, games g WHERE t.id = p.team_id AND t.id = g.hometeam_id GROUP BY p.firstname HAVING sum(g.hometeamscore) > 0</li>
+  <li class="list-group-item">DELETE FROM games where id = 1</li>
+</ul>
