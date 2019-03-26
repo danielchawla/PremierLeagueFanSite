@@ -1,0 +1,17 @@
+<h1>Query Executor</h1>
+  
+<!--   <form class="form-inline my-2 my-lg-0">
+    <input class="form-control mr-sm-2" type="search" placeholder="Query (not working yet)" aria-label="Search">
+    <button class="btn btn-outline-success my-2 my-sm-0" href="/" type="submit">Search</button>
+  </form> -->
+
+  <%= form_tag(query_execute_path, :method => "get",   
+    class: 'navbar-form navbar-left') do %>  
+  <div class="input-group">  
+    <%= search_field_tag :search, params[:search], placeholder: "Insert query here", class: "form-control" %>  
+    <div class="input-group-btn">  
+       <%= submit_tag "Execute", class: 'btn btn-primary' %>  
+    </div>  
+  </div>  
+<% end %>
+</div>
