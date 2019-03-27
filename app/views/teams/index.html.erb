@@ -23,7 +23,7 @@
         <td><%= team.yearfounded %></td>
         <td><span class="input-group-addon">$</span><%= number_with_delimiter(team.budget, :delimiter => ',') %></td>
         <td><%= link_to 'Read', team_articles_path(team) %></td>
-        <td><%= link_to 'Players', team_players_path(team) %></td>
+        <td><%= link_to 'Team Players', team_players_path(team) %></td>
         <td><%= link_to 'Show', team %></td>
         <td><%= link_to 'Edit ', edit_team_path(team) %></td>
         <td><%= link_to 'Destroy', team, method: :delete, data: { confirm: 'Are you sure?' } %></td>

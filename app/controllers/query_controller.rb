@@ -42,7 +42,7 @@ class QueryController < ApplicationController
   			@y = params[:coly]
   			@y2 = params[:coly2]
 
-  			@sql = "SELECT * FROM " + @divisor + " " + @d1 + 
+  			@sql = "SELECT DISTINCT " + @x + " FROM " + @divisor + " " + @d1 + 
 					 			" WHERE NOT EXISTS " +
 					 			"(SELECT " + @d2 + "." + @y2 + " FROM " + @dividend + " " + @d2 + " " +
 								"EXCEPT " +
