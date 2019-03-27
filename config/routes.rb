@@ -1,6 +1,9 @@
 Rails.application.routes.draw do
   
   get 'query/search' => 'query#search', :as => 'search_page'
+  get 'query' => 'query#index'
+  post 'query/search' => 'query#search'
+
   devise_for :app_users
   resources :votes
   resources :games
