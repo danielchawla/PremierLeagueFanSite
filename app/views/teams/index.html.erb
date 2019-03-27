@@ -1,14 +1,16 @@
 <h1>Teams</h1>
 
-<table class="Table">
+<table class="Table table-striped">
   <thead>
     <tr>
-      <th>Shortname</th>
-      <th>Fullname</th>
-      <th>Yearfounded</th>
-      <th>Budget</th>
-      <th>Articles</th>
-      <th colspan="3"></th>
+      <th scope="col">Short Name</th>
+      <th scope="col">Full Name</th>
+      <th scope="col">Year Founded</th>
+      <th scope="col">Budget</th>
+      <th scope="col">Team Articles</th>
+      <th scope="col">Team Players</th>
+      <th scope="col">Links</th>
+      <th scope="col" colspan="2"></th>
     </tr>
   </thead>
 
@@ -18,10 +20,11 @@
         <td><%= team.shortname %></td>
         <td><%= team.fullname %></td>
         <td><%= team.yearfounded %></td>
-        <td><%= team.budget %></td>
-        <td><%= link_to 'Read Articles', team_articles_path(team) %></td>
-        <td><%= link_to 'Show', team %></td>
-        <td><%= link_to 'Edit', edit_team_path(team) %></td>
+        <td><span class="input-group-addon">$</span><%= number_with_delimiter(team.budget, :delimiter => ',') %></td>
+        <td><%= link_to 'Read', team_articles_path(team) %></td>
+        <td><%= link_to 'Players', team_players_path(team) %></td>
+        <td><%= link_to 'Show |', team %></td>
+        <td><%= link_to 'Edit |', edit_team_path(team) %></td>
         <td><%= link_to 'Destroy', team, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>

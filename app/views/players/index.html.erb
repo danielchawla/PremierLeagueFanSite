@@ -2,17 +2,18 @@
 
 <h1>Players</h1>
 
-<table class="Table">
+<table class="Table table-striped">
   <thead>
     <tr>
-      <th>Firstname</th>
-      <th>Lastname</th>
-      <th>Nationality</th>
-      <th>Position</th>
-      <th>Yearsofexperience</th>
-      <th>Salary</th>
-      <th>Team</th>
-      <th colspan="3"></th>
+      <th>First Name </th>
+      <th>Last Name </th>
+      <th>Nationality </th>
+      <th>Position </th>
+      <th>Years Experience </th>
+      <th>Salary </th>
+      <th>Team </th>
+      <th scope="col">Links</th>
+      <th scope="col" colspan="2"></th>
     </tr>
   </thead>
 
@@ -25,10 +26,10 @@
         <td><%= player.nationality %></td>
         <td><%= player.position %></td>
         <td><%= player.yearsofexperience %></td>
-        <td><%= player.salary %></td>
+        <td><span class="input-group-addon">$</span><%= number_with_delimiter(player.salary, :delimiter => ',') %></td>
         <td><%= player.team.fullname %></td>
-        <td><%= link_to 'Show', player_path(player) %></td>
-        <td><%= link_to 'Edit', edit_player_path(player) %></td> 
+        <td><%= link_to 'Show |', player_path(player) %></td>
+        <td><%= link_to 'Edit |', edit_player_path(player) %></td> 
         <td><%= link_to 'Destroy', player, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
       <% end %> 
