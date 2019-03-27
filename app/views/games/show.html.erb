@@ -1,34 +1,34 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Hometeam:</strong>
+  <strong>Home Team:</strong>
   <%= @game.hometeam.fullname %>
 </p>
 
 <p>
-  <strong>Awayteam:</strong>
+  <strong>Away Team:</strong>
   <%= @game.awayteam.fullname %>
 </p>
 
 <p>
   <% if @game.winningteam %>
-  <strong>Winningteam:</strong>
+  <strong>Winning Team:</strong>
   <%= @game.winningteam.fullname %>
   <% end %>
 </p>
 
 <p>
-  <strong>Awayteamscore:</strong>
+  <strong>Away Score:</strong>
   <%= @game.awayteamscore %>
 </p>
 
 <p>
-  <strong>Hometeamscore:</strong>
+  <strong>Home Score:</strong>
   <%= @game.hometeamscore %>
 </p>
 
 <p>
-  <strong>Gamedate:</strong>
+  <strong>Game Date:</strong>
   <%= @game.gamedate %>
 </p>
 
