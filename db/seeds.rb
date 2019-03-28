@@ -22,7 +22,7 @@ t13 = Team.create(shortname: 'MCI', fullname: 'Manchester City', yearfounded: 18
 t14 = Team.create(shortname: 'MUN', fullname: 'Manchester United', yearfounded: 1878, budget: 90000000)
 t15 = Team.create(shortname: 'NEW', fullname: 'Newcastle United', yearfounded: 1892, budget: 98000000)
 t16 = Team.create(shortname: 'SOU', fullname: 'Southampton', yearfounded: 1885, budget: 38000000)
-t17 = Team.create(shortname: 'TOT', fullname: 'Tottenhan Hotspur', yearfounded: 1882, budget: 85000000)
+t17 = Team.create(shortname: 'TOT', fullname: 'Tottenham Hotspur', yearfounded: 1882, budget: 85000000)
 t18 = Team.create(shortname: 'WAT', fullname: 'Watford', yearfounded: 1898, budget: 79000000)
 t19 = Team.create(shortname: 'WHU', fullname: 'West Ham United', yearfounded: 1895, budget: 290000000)
 t20 = Team.create(shortname: 'WQL', fullname: 'Wolverhampton Wanderers', yearfounded: 1877, budget: 93000000)
@@ -482,7 +482,7 @@ Game.create([
 
 #   Articles creation 
 a1 = t1.articles.create(title: 'Arsenal loses to Everton', articletext: 'On May 12, 2018, Arsenal lost 2-1 to Everton', timeposted: '2019-03-25 06:59:00') 
-a2 = t2.articles.create(title: 'Everton wins against Arsenal', articletext: 'On May 12, 2018, Even won 2-1 to Arsenal', timeposted: '2019-03-25 06:59:00')
+a2 = t2.articles.create(title: 'Everton wins against Arsenal', articletext: 'On May 13, 2018, Even won 2-1 to Arsenal', timeposted: '2019-03-25 06:59:00')
 a3 = t4.articles.create(title: 'Brighton and Hove Albion wins against Arsenal', articletext: 'On June 1st, 2018, Brighton and Hove Albion won 1-0 to Arsenal', timeposted: '2019-03-26 07:00:00')
 a4 = t1.articles.create(title: 'Arsenal Trades Players', articletext: 'Arsenal trades players with Crystal Palace', timeposted: '2019-03-20 08:00:00')
 a5 = t1.articles.create(title: 'Arsenal is first in the League', articletext: 'After winning against Manchester United 1-0, Arsenal becomes the new champion in the league', timeposted: '2019-03-15 08:00:00')
@@ -492,43 +492,43 @@ a8 = t6.articles.create(title: 'Cardiff City loses to Eveton', articletext: 'On 
 a9 = t7.articles.create(title: 'Chelsea takes a hit', articletext: 'Chelsea loses their strongest goalkeeper to Arsenal', timeposted: '2018-03-14 08:00:00')
 a10 = t8.articles.create(title: 'Crystal Palace Corruption', articletext: 'Crystal palace caught for money laundering', timeposted: '2019-03-05 08:00:00')
 a11 = t9.articles.create(title: 'Fulham wins agains Arsenal', articletext: 'On April 1st, Fulham wins against Arsenal 1-0', timeposted: '2019-04-15 08:00:00')
-a12 = t10.articles.create(title: 'Huddersfield Town loses against Arsenal', articletext: 'On April 1st, Huddersfield Town loses against Arsenal 3-1', timeposted: '2019-12-15 08:00:00')
+a12 = t10.articles.create(title: 'Huddersfield Town loses against Arsenal', articletext: 'On April 30th, Huddersfield Town loses against Arsenal 3-1', timeposted: '2019-12-15 08:00:00')
 a13 = t11.articles.create(title: 'Leicester City is no more', articletext: 'Leicester City disbands', timeposted: '2019-11-15 08:00:00')
-a14 = t12.articles.create(title: 'Liverpool wins against Arsenal', articletext: 'On April 1st, Liverpool wins against Arsenal 5-3', timeposted: '2019-02-05 08:00:00')
-a15 = t13.articles.create(title: 'Manchester City loses against Chelsea', articletext: 'On April 1st, Manchester City loses against Chelsea 13-0', timeposted: '2019-01-15 08:00:00')
-a16 = t14.articles.create(title: 'Manchester United wins against Chelsea', articletext: 'On April 1st, Manchester United wins against Chelsea 14-0', timeposted: '2019-08-27 08:00:00')
-a17 = t15.articles.create(title: 'Newcastle United loses against Manchester United', articletext: 'On April 1st, Newcastle United loses against Manchester Uniter 14-2', timeposted: '2019-07-29 08:00:00')
-a18 = t16.articles.create(title: 'Southampton wins against Manchester United', articletext: 'On April 20th, Southampton wins against Manchester United 14-12', timeposted: '2019-06-12 08:00:00')
-a19 = t17.articles.create(title: 'Tottenham Hotspur loses against Manchester United', articletext: 'On April 21st, Tottenham Hotspur loses against Manchester United 13-12', timeposted: '2019-05-14 08:00:00')
+a14 = t12.articles.create(title: 'Liverpool wins against Arsenal', articletext: 'On June 12th, Liverpool wins against Arsenal 5-3', timeposted: '2019-02-05 08:00:00')
+a15 = t13.articles.create(title: 'Manchester City loses against Chelsea', articletext: 'On June 13th, Manchester City loses against Chelsea 13-0', timeposted: '2019-01-15 08:00:00')
+a16 = t14.articles.create(title: 'Manchester United wins against Chelsea', articletext: 'On June 15th, Manchester United wins against Chelsea 14-0', timeposted: '2019-08-27 08:00:00')
+a17 = t15.articles.create(title: 'Newcastle United loses against Manchester United', articletext: 'On June 17th, Newcastle United loses against Manchester Uniter 14-2', timeposted: '2019-07-29 08:00:00')
+a18 = t16.articles.create(title: 'Southampton wins against Manchester United', articletext: 'On June 17th, Southampton wins against Manchester United 14-12', timeposted: '2019-06-12 08:00:00')
+a19 = t17.articles.create(title: 'Tottenham Hotspur loses against Manchester United', articletext: 'On June 18th, Tottenham Hotspur loses against Manchester United 13-12', timeposted: '2019-05-14 08:00:00')
 a20 = t18.articles.create(title: 'Watford gets a new logo', articletext: 'Watford gets a new logo', timeposted: '2019-04-17 08:00:00')
-a21 = t19.articles.create(title: 'West Ham United wins against Liverpool', articletext: 'On April 4th, West Ham United wins against Liverpool 12-11', timeposted: '2019-03-19 08:00:00')
-a22 = t20.articles.create(title: 'Wolverhampton Wanderers ties against Liverpool', articletext: 'On April 1st, Wolverhampton ties against Liverpool 1-1', timeposted: '2019-11-15 08:00:00')
+a21 = t19.articles.create(title: 'West Ham United wins against Liverpool', articletext: 'On June 20th, West Ham United wins against Liverpool 12-11', timeposted: '2019-03-19 08:00:00')
+a22 = t20.articles.create(title: 'Wolverhampton Wanderers ties against Liverpool', articletext: 'On June 21st, Wolverhampton ties against Liverpool 1-1', timeposted: '2019-11-15 08:00:00')
 a23 = t2.articles.create(title: 'Everton loses to Arsenal', articletext: 'On October 13th, Everton lost 2-1 to Arsenal', timeposted: '2019-10-15 08:00:00')
-a24 = t2.articles.create(title: 'Everton wins against Arsenal', articletext: 'On October 13th, Everton wins 2-1 to Arsenal', timeposted: '2018-11-15 08:00:00')
-a25 = t3.articles.create(title: 'AFC Bournemouth loses to Everton', articletext: 'On October 13th, AFC Bournemouth lost 2-1 to Everton', timeposted: '2019-11-15 08:00:00')
-a26 = t3.articles.create(title: 'AFC Bournemouth wins against Everton', articletext: 'On October 13th, AFC Bournemouth wins 2-1 to Everton', timeposted: '2019-11-15 08:00:00')
-a27 = t4.articles.create(title: 'Brighton and Hove Albion loses to AFC Bournemouth', articletext: 'On October 13th, Brighton and Hove Albion lost 2-1 to AFC Bournemouth', timeposted: '2019-11-15 08:00:00')
-a28 = t4.articles.create(title: 'Brighton and Hove Albion wins against AFC Bournemouth', articletext: 'On October 13th, Brighton and Hove Albion wins 2-1 to AFC Bournemouth', timeposted: '2019-11-15 08:00:00')
-a29 = t5.articles.create(title: 'Burnley loses to Brighton and Hove Albion', articletext: 'On October 13th, Burnley lost 2-1 to Brighton and Hove Albion', timeposted: '2019-11-15 08:00:00')
-a30 = t5.articles.create(title: 'Burnley wins against Brighton and Hove Albion', articletext: 'On October 13th, Burnley wins 2-1 to Brighton and Hove Albion', timeposted: '2019-11-15 08:00:00')
-a31 = t6.articles.create(title: 'Cardiff City loses to Burnley', articletext: 'On October 13th, Cardiff City lost 2-1 to Burnley', timeposted: '2019-11-15 08:00:00')
-a32 = t6.articles.create(title: 'Cardiff City wins against Burnley', articletext: 'On October 13th, Cardiff City wins 2-1 to Burnley', timeposted: '2019-11-15 08:00:00')
-a33 = t7.articles.create(title: 'Chelsea loses to Arsenal', articletext: 'On October 13th, Chelsea lost 2-1 to Arsenal', timeposted: '2019-11-15 08:00:00')
-a34 = t7.articles.create(title: 'Chelsea wins against Arsenal', articletext: 'On October 13th, Chelsea wins 2-1 to Arsenal', timeposted: '2019-11-15 08:00:00')
-a35 = t8.articles.create(title: 'Crystal Palace loses to Chelsea', articletext: 'On October 13th, Crystal Palace lost 2-1 to Chelsea', timeposted: '2019-11-15 08:00:00')
-a36 = t8.articles.create(title: 'Crystal Palace wins against Chelsea', articletext: 'On October 13th, Crystal Palace wins 2-1 to Chelsea', timeposted: '2019-11-15 08:00:00')
-a37 = t9.articles.create(title: 'Fulham loses to Cardiff City', articletext: 'On October 13th, Fulham lost 2-1 to Cardiff City', timeposted: '2019-11-15 08:00:00')
-a38 = t10.articles.create(title: 'Huddersfield Town loses to Cardiff City', articletext: 'On October 13th, Huddersfield Town lost 2-1 to Cardiff City', timeposted: '2019-11-15 08:00:00')
-a39 = t11.articles.create(title: 'Leicester City loses to Burnley', articletext: 'On October 13th, Leicester City lost 2-1 to Burnley', timeposted: '2019-11-15 08:00:00')
-a40 = t12.articles.create(title: 'Liverpool loses to Burnley', articletext: 'On October 13th, Liverpool lost 2-1 to Burnley', timeposted: '2019-11-15 08:00:00')
-a41 = t13.articles.create(title: 'Manchester City loses to Brighton and Hove Albion', articletext: 'On October 13th, Manchester City lost 2-1 to Brighton and Hove Albion', timeposted: '2019-11-15 08:00:00')
-a42 = t14.articles.create(title: 'Manchester United loses to Brighton and Hove Albion', articletext: 'On October 13th, Manchester United lost 2-1 to Brighton and Hove Albion', timeposted: '2019-11-15 08:00:00')
-a43 = t15.articles.create(title: 'Newcastle United loses to AFC Bournemouth', articletext: 'On October 13th, Newcastle United lost 2-1 to AFC Bournemouth', timeposted: '2019-11-15 08:00:00')
-a44 = t16.articles.create(title: 'Southampton loses to AFC Bournemouth', articletext: 'On October 13th, Southampton lost 2-1 to AFC Bournemouth', timeposted: '2019-11-15 08:00:00')
-a45 = t17.articles.create(title: 'Tottenham Hotspur loses to Everton', articletext: 'On October 13th, Tottenham Hotspur lost 2-1 to Everton', timeposted: '2019-11-15 08:00:00')
-a46 = t18.articles.create(title: 'Watford loses to Everton', articletext: 'On October 13th, Watford lost 2-1 to Everton', timeposted: '2019-11-15 08:00:00')
-a47 = t19.articles.create(title: 'West Ham United loses to Arsenal', articletext: 'On October 13th, West Ham United lost 2-1 to Arsenal', timeposted: '2019-11-15 08:00:00')
-a48 = t20.articles.create(title: 'Wolverhampton Wanderers loses to Arsenal', articletext: 'On October 13th, Wolverhampton Wanderers lost 2-1 to Arsenal', timeposted: '2019-11-15 08:00:00')
+a24 = t2.articles.create(title: 'Everton wins against Arsenal', articletext: 'On October 14th, Everton wins 2-1 to Arsenal', timeposted: '2018-11-15 08:00:00')
+a25 = t3.articles.create(title: 'AFC Bournemouth loses to Everton', articletext: 'On October 14th, AFC Bournemouth lost 2-1 to Everton', timeposted: '2019-11-15 08:00:00')
+a26 = t3.articles.create(title: 'AFC Bournemouth wins against Everton', articletext: 'On October 15th, AFC Bournemouth wins 2-1 to Everton', timeposted: '2019-11-15 08:00:00')
+a27 = t4.articles.create(title: 'Brighton and Hove Albion loses to AFC Bournemouth', articletext: 'On October 16th, Brighton and Hove Albion lost 2-1 to AFC Bournemouth', timeposted: '2019-11-15 08:00:00')
+a28 = t4.articles.create(title: 'Brighton and Hove Albion wins against AFC Bournemouth', articletext: 'On October 17th, Brighton and Hove Albion wins 2-1 to AFC Bournemouth', timeposted: '2019-11-15 08:00:00')
+a29 = t5.articles.create(title: 'Burnley loses to Brighton and Hove Albion', articletext: 'On October 19th, Burnley lost 2-1 to Brighton and Hove Albion', timeposted: '2019-11-15 08:00:00')
+a30 = t5.articles.create(title: 'Burnley wins against Brighton and Hove Albion', articletext: 'On October 20th, Burnley wins 2-1 to Brighton and Hove Albion', timeposted: '2019-11-15 08:00:00')
+a31 = t6.articles.create(title: 'Cardiff City loses to Burnley', articletext: 'On October 21st, Cardiff City lost 2-1 to Burnley', timeposted: '2019-11-15 08:00:00')
+a32 = t6.articles.create(title: 'Cardiff City wins against Burnley', articletext: 'On October 22ne, Cardiff City wins 2-1 to Burnley', timeposted: '2019-11-15 08:00:00')
+a33 = t7.articles.create(title: 'Chelsea loses to Arsenal', articletext: 'On October 23rd, Chelsea lost 2-1 to Arsenal', timeposted: '2019-11-15 08:00:00')
+a34 = t7.articles.create(title: 'Chelsea wins against Arsenal', articletext: 'On October 26th, Chelsea wins 2-1 to Arsenal', timeposted: '2019-11-15 08:00:00')
+a35 = t8.articles.create(title: 'Crystal Palace loses to Chelsea', articletext: 'On November 1st, Crystal Palace lost 2-1 to Chelsea', timeposted: '2019-11-15 08:00:00')
+a36 = t8.articles.create(title: 'Crystal Palace wins against Chelsea', articletext: 'On November 3rd, Crystal Palace wins 2-1 to Chelsea', timeposted: '2019-11-15 08:00:00')
+a37 = t9.articles.create(title: 'Fulham loses to Cardiff City', articletext: 'On November 10th, Fulham lost 2-1 to Cardiff City', timeposted: '2019-11-15 08:00:00')
+a38 = t10.articles.create(title: 'Huddersfield Town loses to Cardiff City', articletext: 'On November 10th, Huddersfield Town lost 2-1 to Cardiff City', timeposted: '2019-11-15 08:00:00')
+a39 = t11.articles.create(title: 'Leicester City loses to Burnley', articletext: 'On November 11th, Leicester City lost 2-1 to Burnley', timeposted: '2019-11-15 08:00:00')
+a40 = t12.articles.create(title: 'Liverpool loses to Burnley', articletext: 'On November 14th, Liverpool lost 2-1 to Burnley', timeposted: '2019-11-15 08:00:00')
+a41 = t13.articles.create(title: 'Manchester City loses to Brighton and Hove Albion', articletext: 'On November 15th, Manchester City lost 2-1 to Brighton and Hove Albion', timeposted: '2019-11-15 08:00:00')
+a42 = t14.articles.create(title: 'Manchester United loses to Brighton and Hove Albion', articletext: 'On November 16th, Manchester United lost 2-1 to Brighton and Hove Albion', timeposted: '2019-11-15 08:00:00')
+a43 = t15.articles.create(title: 'Newcastle United loses to AFC Bournemouth', articletext: 'On November 20th, Newcastle United lost 2-1 to AFC Bournemouth', timeposted: '2019-11-15 08:00:00')
+a44 = t16.articles.create(title: 'Southampton loses to AFC Bournemouth', articletext: 'On November 24th, Southampton lost 2-1 to AFC Bournemouth', timeposted: '2019-11-15 08:00:00')
+a45 = t17.articles.create(title: 'Tottenham Hotspur loses to Everton', articletext: 'On November 26th, Tottenham Hotspur lost 2-1 to Everton', timeposted: '2019-11-15 08:00:00')
+a46 = t18.articles.create(title: 'Watford loses to Everton', articletext: 'On October 27th, Watford lost 2-1 to Everton', timeposted: '2019-11-15 08:00:00')
+a47 = t19.articles.create(title: 'West Ham United loses to Arsenal', articletext: 'On October 28th, West Ham United lost 2-1 to Arsenal', timeposted: '2019-11-15 08:00:00')
+a48 = t20.articles.create(title: 'Wolverhampton Wanderers loses to Arsenal', articletext: 'On October 29th, Wolverhampton Wanderers lost 2-1 to Arsenal', timeposted: '2019-11-15 08:00:00')
 
 
 #   User creation
@@ -546,21 +546,97 @@ u10 = AppUser.create! :email => 'premierleaguefan@1.com', :password => 'hellopre
 #   Comment creation 
 # Note: this is a many to many relationship
 Comment.create([
-	{body: 'Go Arsenal!', article_id: a5.id, app_user_id: u2.id},
-	{body: 'So sad :\'(', article_id: a13.id, app_user_id: u3.id},
-	{body: 'Go Everton!', article_id: a2.id, app_user_id: u3.id},
-	{body: 'So sad :\'(', article_id: a9.id, app_user_id: u2.id},
+	{body: 'Go Arsenal!', article_id: a1.id, app_user_id: u2.id},
+	{body: 'Arsenal come on!', article_id: a2.id, app_user_id: u2.id},
+	{body: 'So sad!', article_id: a3.id, app_user_id: u2.id},
+	{body: 'Go Arsenal!', article_id: a4.id, app_user_id: u2.id},
+	{body: 'Yes Arsenal best!', article_id: a5.id, app_user_id: u2.id},
+	{body: 'Emmm, AFCB cheer up!', article_id: a6.id, app_user_id: u2.id},
+	{body: 'Pretty cute lol!', article_id: a7.id, app_user_id: u2.id},
+	{body: 'Eveton, good job!', article_id: a8.id, app_user_id: u2.id},
+	{body: 'So sad!', article_id: a9.id, app_user_id: u2.id},
+	{body: 'OMG!', article_id: a10.id, app_user_id: u2.id},
+	{body: 'Oh no, Arsenal!', article_id: a11.id, app_user_id: u2.id},
+	{body: 'So sad!', article_id: a2.id, app_user_id: u1.id},
+	{body: 'Go Everton!', article_id: a8.id, app_user_id: u3.id},
+	{body: 'oh no, So sad', article_id: a6.id, app_user_id: u4.id},
+	{body: 'What?!!', article_id: a4.id, app_user_id: u5.id},
+	{body: 'Updated!', article_id: a5.id, app_user_id: u6.id},
+	{body: 'Fulham nice!', article_id: a7.id, app_user_id: u7.id},
+	{body: 'Not bad, huh?', article_id: a9.id, app_user_id: u8.id},
+	{body: 'Seriously???', article_id: a10.id, app_user_id: u9.id},
+	{body: 'What is wrong with Arsenal', article_id: a3.id, app_user_id: u10.id},
+	{body: 'Arsenal is just the best', article_id: a12.id, app_user_id: u2.id},
+	{body: 'Who cares', article_id: a12.id, app_user_id: u8.id},
+	{body: 'HUD deserved better', article_id: a12.id, app_user_id: u7.id},
+	{body: 'im so sad', article_id: a13.id, app_user_id: u1.id},
+	{body: 'Please come back', article_id: a13.id, app_user_id: u5.id},
+	{body: 'Moment of silence for Leicester City fans', article_id: a13.id, app_user_id: u6.id},
 	{body: 'Long Live Liverpool!!!!!', article_id: a14.id, app_user_id: u2.id},
+	{body: 'Only because the refs were on liverpools side!', article_id: a14.id, app_user_id: u4.id},
+	{body: 'Such a good game', article_id: a14.id, app_user_id: u7.id},
 	{body: 'Literally a goal made every 5 seconds', article_id: a15.id, app_user_id: u2.id},
+	{body: 'So boring to watch...', article_id: a15.id, app_user_id: u3.id},
 	{body: 'Cannot believe the score on this it was humiliating to watch', article_id: a16.id, app_user_id: u2.id},
+	{body: 'Glad im not a chelsea fan today', article_id: a16.id, app_user_id: u8.id},
+	{body: 'such a close game...not!', article_id: a17.id, app_user_id: u8.id},
+	{body: 'This is why they shouldn\'t have traded their best forward', article_id: a17.id, app_user_id: u9.id},
 	{body: 'Are Newcastle even trying at this point?', article_id: a17.id, app_user_id: u2.id},
+	{body: 'I miss Beckham', article_id: a18.id, app_user_id: u8.id},
+	{body: 'the fans had such bad energy today.', article_id: a18.id, app_user_id: u9.id},
 	{body: 'Man U may not be that good afterall', article_id: a18.id, app_user_id: u2.id},
 	{body: 'Clearly Man U is the superior team', article_id: a19.id, app_user_id: u2.id},
+	{body: 'Tottenham...you tried', article_id: a19.id, app_user_id: u5.id},
+	{body: 'yayyyyy', article_id: a19.id, app_user_id: u3.id},
+	{body: 'nooooo', article_id: a19.id, app_user_id: u1.id},
 	{body: 'This is so ugly', article_id: a20.id, app_user_id: u2.id},
-	{body: 'Miss the good old days of the nicer logo', article_id: a2.id, app_user_id: u4.id},
-	{body: 'Dont hate guys its not that bad', article_id: a2.id, app_user_id: u9.id},
+	{body: 'what...is this....', article_id: a20.id, app_user_id: u8.id},
+	{body: 'Miss the good old days of the nicer logo', article_id: a20.id, app_user_id: u4.id},
+	{body: 'LOL!', article_id: a20.id, app_user_id: u7.id},
+	{body: 'Dont hate guys its not that bad', article_id: a20.id, app_user_id: u9.id},
 	{body: 'Rip Liverpool', article_id: a21.id, app_user_id: u2.id},
-	{body: 'This is why im a Wanderer', article_id: a22.id, app_user_id: u2.id}
+	{body: 'didnt even watch the game but how was the score SO HIGH', article_id: a21.id, app_user_id: u10.id},
+	{body: 'was actually quite an entertaining match', article_id: a21.id, app_user_id: u6.id},
+	{body: 'This is why im a Wanderer', article_id: a22.id, app_user_id: u2.id},
+	{body: 'Can\'t decide who to root for', article_id: a22.id, app_user_id: u10.id},
+
+	{body: 'noo chelseaaaaa', article_id: a36.id, app_user_id: u8.id},
+	{body: 'YES crystal!!!', article_id: a36.id, app_user_id: u2.id},
+	{body: 'award for most boring game of the season goes to', article_id: a36.id, app_user_id: u8.id},
+	{body: 'would not have predicted this', article_id: a37.id, app_user_id: u2.id},
+	{body: 'fulham....', article_id: a37.id, app_user_id: u10.id},
+	{body: 'the city is BACK', article_id: a37.id, app_user_id: u3.id},
+	{body: 'Cardiff is on a roll', article_id: a38.id, app_user_id: u2.id},
+	{body: 'What happened Leicester?', article_id: a39.id, app_user_id: u2.id},
+	{body: 'This is why they shouldnt have fired their old coach', article_id: a39.id, app_user_id: u10.id},
+	{body: 'lol', article_id: a39.id, app_user_id: u8.id},
+	{body: 'dont even want to be a fan anymore', article_id: a39.id, app_user_id: u1.id},
+	{body: 'yay', article_id: a40.id, app_user_id: u2.id},
+	{body: 'nay', article_id: a40.id, app_user_id: u3.id},
+	{body: 'why is BHA\'s full name so long', article_id: a41.id, app_user_id: u2.id},
+	{body: 'who cares?', article_id: a41.id, app_user_id: u5.id},
+	{body: 'i care!', article_id: a41.id, app_user_id: u7.id},
+	{body: 'bring ronaldo back', article_id: a42.id, app_user_id: u2.id},
+	{body: 'forget ronaldo, bring beckham back!', article_id: a42.id, app_user_id: u8.id},
+	{body: 'so happy', article_id: a42.id, app_user_id: u9.id},
+	{body: ':\)', article_id: a42.id, app_user_id: u10.id},
+	{body: 'never thought i\'d see the day', article_id: a43.id, app_user_id: u2.id},
+	{body: 'im a bournemouth fan now', article_id: a43.id, app_user_id: u10.id},
+	{body: 'gooaaaal', article_id: a44.id, app_user_id: u2.id},
+	{body: 'this is why i love football', article_id: a44.id, app_user_id: u1.id},
+	{body: 'Me too!', article_id: a44.id, app_user_id: u7.id},
+	{body: 'me three', article_id: a44.id, app_user_id: u9.id},
+	{body: 'no!!!!', article_id: a45.id, app_user_id: u2.id},
+	{body: 'Lovely to watch.', article_id: a45.id, app_user_id: u3.id},
+	{body: 'Everton\'s goalkeeper is sooo attractive', article_id: a46.id, app_user_id: u2.id},
+	{body: 'they need to come up with a new tactic', article_id: a46.id, app_user_id: u4.id},
+	{body: 'arsenal proves themselves, once again', article_id: a47.id, app_user_id: u2.id},
+	{body: 'Arsenal only won because they cheated.', article_id: a47.id, app_user_id: u8.id},
+	{body: 'How was any of that cheating?? they won fair and square', article_id: a47.id, app_user_id: u10.id},
+	{body: 'the refs were so unfair', article_id: a47.id, app_user_id: u5.id},
+	{body: 'wolverhampton!!!! i was rooting for you!!!', article_id: a48.id, app_user_id: u2.id},
+	{body: 'i get why everyone loves arsenal now', article_id: a48.id, app_user_id: u9.id},
+	{body: 'definitely gonna rewatch the highlights of this', article_id: a48.id, app_user_id: u10.id}
 ]) # DON'T FORGET: add commas between each game entry. last one doesn't need it
 
 
