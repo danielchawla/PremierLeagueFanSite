@@ -386,16 +386,44 @@ t19.managers.create(firstname: 'Manuel', lastname: 'Pellegrini')
 t20.managers.create(firstname: 'Nuno', lastname: 'Esperito Santo')
 
 #   Games creation 
-# Note: this is a many to many relationship
+# Game.create([
+# 	{awayteamscore: 2, hometeamscore: 1, gamedate: '05-12-2018', hometeam_id: t1.id, awayteam_id: t2.id, winningteam_id: t2.id},
+# 	{awayteamscore: 3, hometeamscore: 3, gamedate: '06-01-2018', hometeam_id: t3.id, awayteam_id: t6.id, winningteam_id: nil}, # tie game so no winning team
+# 	{awayteamscore: 1, hometeamscore: 0, gamedate: '06-01-2018', hometeam_id: t5.id, awayteam_id: t7.id, winningteam_id: t4.id} 
+# ]) 
+
+#   Games to test division 
 Game.create([
 	{awayteamscore: 2, hometeamscore: 1, gamedate: '05-12-2018', hometeam_id: t1.id, awayteam_id: t2.id, winningteam_id: t2.id},
 	{awayteamscore: 3, hometeamscore: 3, gamedate: '06-01-2018', hometeam_id: t1.id, awayteam_id: t6.id, winningteam_id: nil}, # tie game so no winning team
-	{awayteamscore: 1, hometeamscore: 0, gamedate: '06-01-2018', hometeam_id: t1.id, awayteam_id: t7.id, winningteam_id: t4.id} 
+	{awayteamscore: 1, hometeamscore: 0, gamedate: '06-01-2018', hometeam_id: t1.id, awayteam_id: t4.id, winningteam_id: t4.id} 
 ]) # DON'T FORGET: add commas between each game entry. last one doesn't need it
+
+
 
 #   Articles creation 
 a1 = t1.articles.create(title: 'Arsenal loses to Everton', articletext: 'On May 12, 2018, Arsenal lost 2-1 to Everton', timeposted: '2019-03-25 06:59:00') 
 a2 = t2.articles.create(title: 'Everton wins against Arsenal', articletext: 'On May 12, 2018, Even won 2-1 to Arsenal', timeposted: '2019-03-25 06:59:00')
+a3 = t4.articles.create(title: 'Brighton and Hove Albion wins against Arsenal', articletext: 'On June 1st, 2018, Brighton and Hove Albion won 1-0 to Arsenal', timeposted: '2019-03-26 07:00:00')
+a4 = t1.articles.create(title: 'Arsenal Trades Players', articletext: 'Arsenal trades players with Crystal Palace', timeposted: '2019-03-20 08:00:00')
+a5 = t1.articles.create(title: 'Arsenal is first in the League', articletext: 'After winning against Manchester United 1-0, Arsenal becomes the new champion in the league', timeposted: '2019-03-15 08:00:00')
+a6 = t3.articles.create(title: 'AFC Bournemouth is the Worst Team in the League', articletext: 'After losing to Crystal Palace 14-0, AFC Bournemouth becomes the worst team in the league', timeposted: '2019-03-05 08:00:00')
+a7 = t5.articles.create(title: 'Burnley changes Mascots', articletext: 'After backlash for their old mascot, Burnley decides to change their mascot', timeposted: '2019-03-01 08:00:00')
+a8 = t6.articles.create(title: 'Cardiff City loses to Eveton', articletext: 'On January 1st, Cardiff City loses to Everton 17-0', timeposted: '2019-01-20 08:00:00')
+a9 = t7.articles.create(title: 'Chelsea takes a hit', articletext: 'Chelsea loses their strongest goalkeeper to Arsenal', timeposted: '2018-03-14 08:00:00')
+a10 = t8.articles.create(title: 'Crystal Palace Corruption', articletext: 'Crystal palace caught for money laundering', timeposted: '2019-03-05 08:00:00')
+a11 = t9.articles.create(title: 'Fulham wins agains Arsenal', articletext: 'On April 1st, Fulham wins against Arsenal 1-0', timeposted: '2019-04-15 08:00:00')
+a12 = t10.articles.create(title: 'Huddersfield Town loses against Arsenal', articletext: 'On April 1st, Huddersfield Town loses against Arsenal 3-1', timeposted: '2019-12-15 08:00:00')
+a13 = t11.articles.create(title: 'Leicester City is no more', articletext: 'Leicester City disbands', timeposted: '2019-11-15 08:00:00')
+a14 = t12.articles.create(title: 'Liverpool wins against Arsenal', articletext: 'On April 1st, Liverpool wins against Arsenal 5-3', timeposted: '2019-02-05 08:00:00')
+a15 = t13.articles.create(title: 'Manchester City loses against Chelsea', articletext: 'On April 1st, Manchester City loses against Chelsea 13-0', timeposted: '2019-01-15 08:00:00')
+a16 = t14.articles.create(title: 'Manchester United wins against Chelsea', articletext: 'On April 1st, Manchester United wins against Chelsea 14-0', timeposted: '2019-08-27 08:00:00')
+a17 = t15.articles.create(title: 'Newcastle United loses against Manchester United', articletext: 'On April 1st, Newcastle United loses against Manchester Uniter 14-2', timeposted: '2019-07-29 08:00:00')
+a18 = t16.articles.create(title: 'Southampton wins against Manchester United', articletext: 'On April 20th, Southampton wins against Manchester United 14-12', timeposted: '2019-06-12 08:00:00')
+a19 = t17.articles.create(title: 'Tottenham Hotspur loses against Manchester United', articletext: 'On April 21st, Tottenham Hotspur loses against Manchester United 13-12', timeposted: '2019-05-14 08:00:00')
+a20 = t18.articles.create(title: 'Watford gets a new logo', articletext: 'Watford gets a new logo', timeposted: '2019-04-17 08:00:00')
+a21 = t19.articles.create(title: 'West Ham United wins against Liverpool', articletext: 'On April 4th, West Ham United wins against Liverpool 12-11', timeposted: '2019-03-19 08:00:00')
+a22 = t20.articles.create(title: 'Wolverhampton Wanderers ties against Liverpool', articletext: 'On April 1st, Wolverhampton ties against Liverpool 1-1', timeposted: '2019-11-15 08:00:00')
 
 #   User creation
 u1 = AppUser.create! :email => 'admin@1.com', :password => '123456', :password_confirmation => '123456', :admin => true

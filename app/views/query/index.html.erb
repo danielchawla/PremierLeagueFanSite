@@ -3,22 +3,13 @@
   Enter advanced query into query executor above or use the simple query interface below
 </div>
 <br>
-<h3>Example Queries</h3>
-<ul class="list-group">
-  <li class="list-group-item">SELECT * FROM teams</li>
-  <li class="list-group-item">SELECT gamedate FROM games</li>
-  <li class="list-group-item">SELECT t.fullname AS winningteam FROM teams t INNER JOIN games g ON g.winningteam_id = t.id</li>
-  <li class="list-group-item">SELECT DISTINCT p.firstname, sum(g.hometeamscore) AS GoalsAsHomeTeam FROM players p, teams t, games g WHERE t.id = p.team_id AND t.id = g.hometeam_id GROUP BY p.firstname HAVING sum(g.hometeamscore) > 0</li>
-  <li class="list-group-item">DELETE FROM games where id = 1</li>
-</ul>
-<br>
 <h3>Simple Selection and Projection Query</h3>
 <br>
-
+<p><i>Note: Use double quotes for quotations</i></p>
 <%= bootstrap_form_tag url: '/query/search' do |f| %>
-  <%= f.text_field :select, label: "SELECT", placeholder: "*" %>
+  <%= f.text_field :select, label: "SELECT" %>
   <%= f.select :table, [["app_users", :app_users], ["articles", :articles], ["coaches", :coaches], ["comments", :comments], ["games", :games], ["managers", :managers], ["owners", :owners], ["players", :players], ["teams", :teams] ], { label: "FROM", wrapper: { class: 'has-warning', data: { foo: 'bar' } } }, { class: "selectpicker" } %>
-  <%= f.text_field :where, label: "WHERE", placeholder: "id > 2" %>
+  <%= f.text_field :where, label: "WHERE" %>
   <%= f.submit "Execute!" %>
 <% end %>
 
@@ -26,13 +17,29 @@
 <h3>Simple Division Query</h3>
 <br>
 <p><i>This operation assumes the format: DivisorTable(x,y) / DividendTable(y)</i></p>
+<i>Examples:
+  <ul>
+    <li>Find all teams that played as hometeams in every game by entering: teams, id, id, games, hometeam_id</li>
+    <li>Find users who commented on all articles by entering: comments, app_user_id, article_id, articles, id </li>
+  </ul>
+</i>
 <%= bootstrap_form_tag url: '/query/search' do |f| %>
   <%= f.select :divisor, [["app_users", :app_users], ["articles", :articles], ["coaches", :coaches], ["comments", :comments], ["games", :games], ["managers", :managers], ["owners", :owners], ["players", :players], ["teams", :teams] ], { label: "Divisor table (e.g. Find all the...)", wrapper: { class: 'has-warning', data: { foo: 'bar' } } }, { class: "selectpicker" } %>
-  <%= f.text_field :colx, label: "Column x in divisor table", placeholder: "id" %>
-  <%= f.text_field :coly, label: "Column y in divisor table", placeholder: "id" %>
+  <%= f.text_field :colx, label: "Column x in divisor table" %>
+  <%= f.text_field :coly, label: "Column y in divisor table"%>
   <%= f.select :dividend, [["app_users", :app_users], ["articles", :articles], ["coaches", :coaches], ["comments", :comments], ["games", :games], ["managers", :managers], ["owners", :owners], ["players", :players], ["teams", :teams] ], { label: "Dividend table (e.g. who interacted with all the...)", wrapper: { class: 'has-warning', data: { foo: 'bar' } } }, { class: "selectpicker" } %>
-   <%= f.text_field :coly2, label: "Column y in dividend table", placeholder: "id" %>
+   <%= f.text_field :coly2, label: "Column y in dividend table" %>
   <%= f.submit "Execute!" %>
 <% end %>
 <br>
-<p><i>For example, to find all teams that played as hometeams in every game use the following inputs: teams, id, id, games, hometeam_id </i></p>
+
+<br>
+<h3>Example Advanced Queries</h3>
+<p><i>You can enter similar queries into the search bar at the top of the page.</i></p>
+<ul class="list-group">
+  <li class="list-group-item">SELECT * FROM teams</li>
+  <li class="list-group-item">SELECT gamedate FROM games</li>
+  <li class="list-group-item">SELECT t.fullname AS winningteam FROM teams t INNER JOIN games g ON g.winningteam_id = t.id</li>
+  <li class="list-group-item">SELECT DISTINCT p.firstname, sum(g.hometeamscore) AS GoalsAsHomeTeam FROM players p, teams t, games g WHERE t.id = p.team_id AND t.id = g.hometeam_id GROUP BY p.firstname HAVING sum(g.hometeamscore) > 0</li>
+  <li class="list-group-item">DELETE FROM games where id = 1</li>
+</ul>
