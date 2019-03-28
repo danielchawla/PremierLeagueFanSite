@@ -1,16 +1,15 @@
 
-<p>
-  <strong>Title:</strong>
+<h1>
   <%= @article.title %>
-</p>
+</h1>
 
 <p>
-  <strong>Articletext:</strong>
+  <strong>Text:</strong>
   <%= @article.articletext %>
 </p>
 
 <p>
-  <strong>Timeposted:</strong>
+  <strong>Time Posted:</strong>
   <%= @article.timeposted %>
 </p>
 
@@ -29,5 +28,6 @@
   </div>
 <% end %>
 <%= render partial: 'comments/form' %>
+<br>  
 <%= link_to 'Edit', edit_article_path(@article), class: 'btn btn-primary' %> 
 <%= link_to 'Back', team_articles_path(@article.team), class: 'btn btn-primary' %>

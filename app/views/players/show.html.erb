@@ -1,11 +1,11 @@
 
 <p>
-  <strong>Firstname:</strong>
+  <strong>First Name:</strong>
   <%= @player.firstname %>
 </p>
 
 <p>
-  <strong>Lastname:</strong>
+  <strong>Last Name:</strong>
   <%= @player.lastname %>
 </p>
 
@@ -20,13 +20,14 @@
 </p>
 
 <p>
-  <strong>Yearsofexperience:</strong>
+  <strong>Years Experience:</strong>
   <%= @player.yearsofexperience %>
 </p>
 
 <p>
   <strong>Salary:</strong>
-  <%= @player.salary %>
+  <span class="input-group-addon">$</span>
+  <%= number_with_delimiter(@player.salary, :delimiter => ',') %>
 </p>
 
 <strong>Team:</strong>
