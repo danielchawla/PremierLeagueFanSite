@@ -390,7 +390,32 @@ t20.managers.create(firstname: 'Nuno', lastname: 'Esperito Santo')
 # Game.create([
 # 	{awayteamscore: 2, hometeamscore: 1, gamedate: '05-12-2018', hometeam_id: t1.id, awayteam_id: t2.id, winningteam_id: t2.id},
 # 	{awayteamscore: 3, hometeamscore: 3, gamedate: '06-01-2018', hometeam_id: t3.id, awayteam_id: t6.id, winningteam_id: nil}, # tie game so no winning team
-# 	{awayteamscore: 1, hometeamscore: 0, gamedate: '06-01-2018', hometeam_id: t5.id, awayteam_id: t7.id, winningteam_id: t4.id} 
+# 	{awayteamscore: 1, hometeamscore: 0, gamedate: '06-01-2018', hometeam_id: t5.id, awayteam_id: t7.id, winningteam_id: t4.id},
+	# {awayteamscore: 14, hometeamscore: 0, gamedate: '05-11-2017', hometeam_id: t3.id, awayteam_id: t8.id, winningteam_id: t8.id},
+	# {awayteamscore: 0, hometeamscore: 17, gamedate: '01-01-2019', hometeam_id: t2.id, awayteam_id: t6.id, winningteam_id: t2.id},
+	# {awayteamscore: 1, hometeamscore: 0, gamedate: '01-04-2019', hometeam_id: t1.id, awayteam_id: t9.id, winningteam_id: t9.id},
+	# {awayteamscore: 1, hometeamscore: 3, gamedate: '01-04-2019', hometeam_id: t1.id, awayteam_id: t10.id, winningteam_id: t1.id},
+	# {awayteamscore: 5, hometeamscore: 3, gamedate: '01-04-2019', hometeam_id: t1.id, awayteam_id: t12.id, winningteam_id: t12.id},
+	# {awayteamscore: 13, hometeamscore: 0, gamedate: '01-04-2019', hometeam_id: t13.id, awayteam_id: t7.id, winningteam_id: t7.id},
+	# {awayteamscore: 0, hometeamscore: 14, gamedate: '01-04-2019', hometeam_id: t14.id, awayteam_id: t7.id, winningteam_id: t14.id},
+	# {awayteamscore: 14, hometeamscore: 2, gamedate: '01-04-2019', hometeam_id: t15.id, awayteam_id: t14.id, winningteam_id: t14.id},
+	# {awayteamscore: 12, hometeamscore: 14, gamedate: '20-04-2019', hometeam_id: t16.id, awayteam_id: t14.id, winningteam_id: t16.id},
+	# {awayteamscore: 12, hometeamscore: 13, gamedate: '21-04-2019', hometeam_id: t14.id, awayteam_id: t17.id, winningteam_id: t14.id},
+	# {awayteamscore: 12, hometeamscore: 11, gamedate: '04-04-2019', hometeam_id: t12.id, awayteam_id: t19.id, winningteam_id: t19.id},
+	# {awayteamscore: 1, hometeamscore: 1, gamedate: '01-04-2019', hometeam_id: t20.id, awayteam_id: t12.id, winningteam_id: nil},
+	# {awayteamscore: 0, hometeamscore: 2, gamedate: '17-03-2019', hometeam_id: t2.id, awayteam_id: t7.id, winningteam_id: t2.id},
+	# {awayteamscore: 0, hometeamscore: 2, gamedate: '10-03-2019', hometeam_id: t1.id, awayteam_id: t14.id, winningteam_id: t1.id},
+	# {awayteamscore: 2, hometeamscore: 4, gamedate: '10-03-2019', hometeam_id: t12.id, awayteam_id: t5.id, winningteam_id: t12.id},
+	# {awayteamscore: 1, hometeamscore: 3, gamedate: '09-03-2019', hometeam_id: t13.id, awayteam_id: t18.id, winningteam_id: t13.id},
+	# {awayteamscore: 2, hometeamscore: 1, gamedate: '09-03-2019', hometeam_id: t8.id, awayteam_id: t4.id, winningteam_id: t4.id},
+	# {awayteamscore: 1, hometeamscore: 1, gamedate: '02-03-2019', hometeam_id: t17.id, awayteam_id: t1.id, winningteam_id: nil},
+	# {awayteamscore: 1, hometeamscore: 2, gamedate: '23-02-2019', hometeam_id: t5.id, awayteam_id: t17.id, winningteam_id: t5.id},
+	# {awayteamscore: 0, hometeamscore: 6, gamedate: '10-02-2019', hometeam_id: t13.id, awayteam_id: t7.id, winningteam_id: t13.id},
+	# {awayteamscore: 1, hometeamscore: 2, gamedate: '29-01-2019', hometeam_id: t1.id, awayteam_id: t6.id, winningteam_id: t1.id},
+	# {awayteamscore: 0, hometeamscore: 0, gamedate: '12-01-2019', hometeam_id: t6.id, awayteam_id: t10.id, winningteam_id: nil},
+	# {awayteamscore: 1, hometeamscore: 0, gamedate: '12-01-2019', hometeam_id: t4.id, awayteam_id: t12.id, winningteam_id: t12.id},
+	# {awayteamscore: 2, hometeamscore: 0, gamedate: '02-01-2019', hometeam_id: t20.id, awayteam_id: t8.id, winningteam_id: t8.id},
+	# {awayteamscore: 0, hometeamscore: 2, gamedate: '30-12-2018', hometeam_id: t5.id, awayteam_id: t19.id, winningteam_id: t5.id}
 # ]) 
 
 #   Games to test division 
@@ -398,32 +423,7 @@ Game.create([
 	{awayteamscore: 2, hometeamscore: 1, gamedate: '12-05-2018', hometeam_id: t1.id, awayteam_id: t2.id, winningteam_id: t2.id},
 	{awayteamscore: 3, hometeamscore: 3, gamedate: '06-01-2018', hometeam_id: t1.id, awayteam_id: t6.id, winningteam_id: nil}, # tie game so no winning team
 	{awayteamscore: 1, hometeamscore: 0, gamedate: '01-06-2018', hometeam_id: t1.id, awayteam_id: t4.id, winningteam_id: t4.id},
-	{awayteamscore: 0, hometeamscore: 1, gamedate: '23-02-2019', hometeam_id: t1.id, awayteam_id: t14.id, winningteam_id: t1.id},
-	{awayteamscore: 14, hometeamscore: 0, gamedate: '05-11-2017', hometeam_id: t3.id, awayteam_id: t8.id, winningteam_id: t8.id},
-	{awayteamscore: 0, hometeamscore: 17, gamedate: '01-01-2019', hometeam_id: t2.id, awayteam_id: t6.id, winningteam_id: t2.id},
-	{awayteamscore: 1, hometeamscore: 0, gamedate: '01-04-2019', hometeam_id: t1.id, awayteam_id: t9.id, winningteam_id: t9.id},
-	{awayteamscore: 1, hometeamscore: 3, gamedate: '01-04-2019', hometeam_id: t1.id, awayteam_id: t10.id, winningteam_id: t1.id},
-	{awayteamscore: 5, hometeamscore: 3, gamedate: '01-04-2019', hometeam_id: t1.id, awayteam_id: t12.id, winningteam_id: t12.id},
-	{awayteamscore: 13, hometeamscore: 0, gamedate: '01-04-2019', hometeam_id: t13.id, awayteam_id: t7.id, winningteam_id: t7.id},
-	{awayteamscore: 0, hometeamscore: 14, gamedate: '01-04-2019', hometeam_id: t14.id, awayteam_id: t7.id, winningteam_id: t14.id},
-	{awayteamscore: 14, hometeamscore: 2, gamedate: '01-04-2019', hometeam_id: t15.id, awayteam_id: t14.id, winningteam_id: t14.id},
-	{awayteamscore: 12, hometeamscore: 14, gamedate: '20-04-2019', hometeam_id: t16.id, awayteam_id: t14.id, winningteam_id: t16.id},
-	{awayteamscore: 12, hometeamscore: 13, gamedate: '21-04-2019', hometeam_id: t14.id, awayteam_id: t17.id, winningteam_id: t14.id},
-	{awayteamscore: 12, hometeamscore: 11, gamedate: '04-04-2019', hometeam_id: t12.id, awayteam_id: t19.id, winningteam_id: t19.id},
-	{awayteamscore: 1, hometeamscore: 1, gamedate: '01-04-2019', hometeam_id: t20.id, awayteam_id: t12.id, winningteam_id: nil},
-	{awayteamscore: 0, hometeamscore: 2, gamedate: '17-03-2019', hometeam_id: t2.id, awayteam_id: t7.id, winningteam_id: t2.id},
-	{awayteamscore: 0, hometeamscore: 2, gamedate: '10-03-2019', hometeam_id: t1.id, awayteam_id: t14.id, winningteam_id: t1.id},
-	{awayteamscore: 2, hometeamscore: 4, gamedate: '10-03-2019', hometeam_id: t12.id, awayteam_id: t5.id, winningteam_id: t12.id},
-	{awayteamscore: 1, hometeamscore: 3, gamedate: '09-03-2019', hometeam_id: t13.id, awayteam_id: t18.id, winningteam_id: t13.id},
-	{awayteamscore: 2, hometeamscore: 1, gamedate: '09-03-2019', hometeam_id: t8.id, awayteam_id: t4.id, winningteam_id: t4.id},
-	{awayteamscore: 1, hometeamscore: 1, gamedate: '02-03-2019', hometeam_id: t17.id, awayteam_id: t1.id, winningteam_id: nil},
-	{awayteamscore: 1, hometeamscore: 2, gamedate: '23-02-2019', hometeam_id: t5.id, awayteam_id: t17.id, winningteam_id: t5.id},
-	{awayteamscore: 0, hometeamscore: 6, gamedate: '10-02-2019', hometeam_id: t13.id, awayteam_id: t7.id, winningteam_id: t13.id},
-	{awayteamscore: 1, hometeamscore: 2, gamedate: '29-01-2019', hometeam_id: t1.id, awayteam_id: t6.id, winningteam_id: t1.id},
-	{awayteamscore: 0, hometeamscore: 0, gamedate: '12-01-2019', hometeam_id: t6.id, awayteam_id: t10.id, winningteam_id: nil},
-	{awayteamscore: 1, hometeamscore: 0, gamedate: '12-01-2019', hometeam_id: t4.id, awayteam_id: t12.id, winningteam_id: t12.id},
-	{awayteamscore: 2, hometeamscore: 0, gamedate: '02-01-2019', hometeam_id: t20.id, awayteam_id: t8.id, winningteam_id: t8.id},
-	{awayteamscore: 0, hometeamscore: 2, gamedate: '30-12-2018', hometeam_id: t5.id, awayteam_id: t19.id, winningteam_id: t5.id}
+	{awayteamscore: 0, hometeamscore: 1, gamedate: '23-02-2019', hometeam_id: t1.id, awayteam_id: t14.id, winningteam_id: t1.id}
 ]) # DON'T FORGET: add commas between each game entry. last one doesn't need it
 
 
