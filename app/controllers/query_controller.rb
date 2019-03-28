@@ -31,14 +31,18 @@ class QueryController < ApplicationController
     elsif !params[:cmo].blank?
       @sql = @sql + 'SELECT g.id as GameID, c.firstname as CoachFname, c.lastname as CoachLname, m.firstname as ManagerFname, m.lastname as ManagerLname, o.firstname as OwnerFname, o.lastname as OwnerLname FROM games g, teams t, coaches c, managers m, owners o WHERE g.hometeam_id = t.id AND t.id = c.team_id AND t.id = m.team_id AND t.id = o.team_id UNION SELECT g.id as GameID, c.firstname as CoachFname, c.lastname as CoachLname, m.firstname as ManagerFname, m.lastname as ManagerLname, o.firstname as OwnerFname, o.lastname as OwnerLname FROM games g, teams t, coaches c, managers m, owners o WHERE g.awayteam_id = t.id AND t.id = c.team_id AND t.id = m.team_id AND t.id = o.team_id '
     elsif !params[:maxhome].blank?
-      @sql = @sql + 'SELECT DISTINCT t.fullname FROM teams t WHERE t.id IN (SELECT max(g.hometeamscore) FROM games g) '
+      @sql = @sql + 'SELECT DISTINCT t.fullname FROM teams t, games g WHERE t.id = g.hometeam_id AND g.hometeamscore = (SELECT max(g.hometeamscore) FROM games g)'
     elsif !params[:maxaway].blank?
-      @sql = @sql + 'SELECT DISTINCT t.fullname FROM teams t WHERE t.id IN (SELECT max(g.awayteamscore) FROM games g)'
+      @sql = @sql + 'SELECT DISTINCT t.fullname FROM teams t, games g WHERE t.id = g.awayteam_id AND g.awayteamscore = (SELECT max(g.awayteamscore) FROM games g)'
     elsif !params[:maxall].blank?
       @sql = @sql + 'SELECT DISTINCT t.fullname FROM teams t, games g WHERE (g.hometeam_id = t.id AND g.hometeamscore = ' +
           '(SELECT max(max(g.awayteamscore),max(g.hometeamscore)) FROM games g)) ' +
           ' OR (g.awayteam_id = t.id AND g.awayteamscore = ' +
           ' (SELECT max(max(g.awayteamscore),max(g.hometeamscore)) FROM games g)) '
+    elsif !params[:teamwins].blank?
+      @sql = @sql + 'select t.fullname, count(*) AS wins from games g, teams t WHERE g.winningteam_id = t.id AND g.winningteam_id IS NOT NULL  GROUP BY g.winningteam_id HAVING count(*)  ORDER BY count(*) DESC'
+    elsif !params[:mostwins].blank?
+      @sql = @sql + 'select t.fullname, count(*) AS wins from games g, teams t WHERE g.winningteam_id = t.id AND g.winningteam_id IS NOT NULL  GROUP BY g.winningteam_id HAVING count(*)  ORDER BY count(*) DESC LIMIT 1'
     end
     begin
     @results = ActiveRecord::Base.connection.execute(@sql)

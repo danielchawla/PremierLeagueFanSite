@@ -339,6 +339,28 @@ t18.coaches.create(firstname: 'Javier', lastname: 'Gracia')
 t19.coaches.create(firstname: 'Manuel', lastname: 'Pellegrini')
 t20.coaches.create(firstname: 'Nuno', lastname: 'Esperito Santo')
 
+#   Managers Creation
+t1.managers.create(firstname: 'Jonathan', lastname: 'Crosby') 
+t2.managers.create(firstname: 'Fred', lastname: 'Williams') 
+t3.managers.create(firstname: 'Eddie', lastname: 'Howe')
+t4.managers.create(firstname: 'Chris', lastname: 'Hughton')
+t5.managers.create(firstname: 'Sean', lastname: 'Dyche')
+t6.managers.create(firstname: 'Neil', lastname: 'Warnock')
+t7.managers.create(firstname: 'Maurizio', lastname: 'Sarri')
+t8.managers.create(firstname: 'Roy', lastname: 'Hodgerson')
+t9.managers.create(firstname: 'Jude', lastname: 'Inglis')
+t10.managers.create(firstname: 'Mark', lastname: 'Hudson')
+t11.managers.create(firstname: 'Mike', lastname: 'Stowell')
+t12.managers.create(firstname: 'Jurgen', lastname: 'Klopp')
+t13.managers.create(firstname: 'Josep', lastname: 'Guardiola')
+t14.managers.create(firstname: 'Jose', lastname: 'Mourinho')
+t15.managers.create(firstname: 'Rafael', lastname: 'Benitez')
+t16.managers.create(firstname: 'Kelvin', lastname: 'Davis')
+t17.managers.create(firstname: 'Mauricio', lastname: 'Pachettino')
+t18.managers.create(firstname: 'Javier', lastname: 'Gracia')
+t19.managers.create(firstname: 'Manuel', lastname: 'Pellegrini')
+t20.managers.create(firstname: 'Nuno', lastname: 'Esperito Santo')
+
 #   Owners Creation
 # Note: a team can only have one owner. 
 # Because of the "has_one" relationship, owners are created using 
@@ -364,28 +386,6 @@ t18.owner = Owner.create(firstname: 'Han', lastname: 'Trio')
 t19.owner = Owner.create(firstname: 'Han', lastname: 'Quartet')
 t20.owner = Owner.create(firstname: 'Ben', lastname: 'Stiller')
 
-#   Managers Creation
-t1.managers.create(firstname: 'Jonathan', lastname: 'Crosby') 
-t2.managers.create(firstname: 'Fred', lastname: 'Williams') 
-t3.managers.create(firstname: 'Eddie', lastname: 'Howe')
-t4.managers.create(firstname: 'Chris', lastname: 'Hughton')
-t5.managers.create(firstname: 'Sean', lastname: 'Dyche')
-t6.managers.create(firstname: 'Neil', lastname: 'Warnock')
-t7.managers.create(firstname: 'Maurizio', lastname: 'Sarri')
-t8.managers.create(firstname: 'Roy', lastname: 'Hodgerson')
-t9.managers.create(firstname: 'Scott', lastname: 'Parker')
-t10.managers.create(firstname: 'Mark', lastname: 'Hudson')
-t11.managers.create(firstname: 'Mike', lastname: 'Stowell')
-t12.managers.create(firstname: 'Jurgen', lastname: 'Klopp')
-t13.managers.create(firstname: 'Josep', lastname: 'Guardiola')
-t14.managers.create(firstname: 'Jose', lastname: 'Mourinho')
-t15.managers.create(firstname: 'Rafael', lastname: 'Benitez')
-t16.managers.create(firstname: 'Kelvin', lastname: 'Davis')
-t17.managers.create(firstname: 'Mauricio', lastname: 'Pachettino')
-t18.managers.create(firstname: 'Javier', lastname: 'Gracia')
-t19.managers.create(firstname: 'Manuel', lastname: 'Pellegrini')
-t20.managers.create(firstname: 'Nuno', lastname: 'Esperito Santo')
-
   # Games to test division 
 Game.create([
 	{awayteamscore: 2, hometeamscore: 1, gamedate: '05-12-2018', hometeam_id: t1.id, awayteam_id: t2.id, winningteam_id: t2.id},
@@ -393,6 +393,7 @@ Game.create([
 	{awayteamscore: 1, hometeamscore: 0, gamedate: '06-01-2018', hometeam_id: t1.id, awayteam_id: t7.id, winningteam_id: t7.id},
 	{awayteamscore: 14, hometeamscore: 0, gamedate: '05-11-2017', hometeam_id: t1.id, awayteam_id: t8.id, winningteam_id: t8.id},
 	{awayteamscore: 0, hometeamscore: 17, gamedate: '01-01-2019', hometeam_id: t1.id, awayteam_id: t6.id, winningteam_id: t1.id},
+	{awayteamscore: 0, hometeamscore: 1, gamedate: '01-01-2019', hometeam_id: t1.id, awayteam_id: t9.id, winningteam_id: t1.id}
 ]) 
 
 #   Games creation
