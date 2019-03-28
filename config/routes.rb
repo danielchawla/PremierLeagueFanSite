@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  mount ReportsKit::Engine, at: '/'
   
   get 'query/search' => 'query#search', :as => 'search_page'
   get 'query' => 'query#index'
