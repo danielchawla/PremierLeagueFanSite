@@ -461,10 +461,10 @@ u3 = AppUser.create! :email => 'sarah@2.com', :password => '123456', :password_c
 #   Comment creation 
 # Note: this is a many to many relationship
 Comment.create([
-	{body: 'Go Arsenal!', article_id: t2.id, app_user_id: u2.id},
-	{body: 'So sad :\'(', article_id: t2.id, app_user_id: u3.id},
-	{body: 'Go Everton!', article_id: t1.id, app_user_id: u3.id},
-	{body: 'So sad :\'(', article_id: t1.id, app_user_id: u2.id}
+	{body: 'Go Arsenal!', article_id: a5.id, app_user_id: u2.id},
+	{body: 'So sad :\'(', article_id: a13.id, app_user_id: u3.id},
+	{body: 'Go Everton!', article_id: a2.id, app_user_id: u3.id},
+	{body: 'So sad :\'(', article_id: a9.id, app_user_id: u2.id}
 ]) # DON'T FORGET: add commas between each game entry. last one doesn't need it
 
 
