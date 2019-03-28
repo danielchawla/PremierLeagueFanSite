@@ -15,6 +15,7 @@
 
   <tbody>
     <% @coaches.each do |coach| %>
+    <% if coach.team_id == params{1}["team_id"].to_i %>
       <tr>
         <td><%= coach.firstname %></td>
         <td><%= coach.lastname %></td>
@@ -23,6 +24,7 @@
         <td><%= link_to 'Edit', edit_coach_path(coach) %></td>
         <td><%= link_to 'Destroy', coach, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
+    <% end %>
     <% end %>
   </tbody>
 </table>
