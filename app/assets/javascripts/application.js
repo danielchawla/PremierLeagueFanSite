@@ -19,3 +19,4 @@
 //= require bootstrap
 //= require_tree .
 
+$.backstretch("assets/images/soccer.jpg");

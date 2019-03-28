@@ -29,9 +29,9 @@
         <td><%= game.hometeamscore %></td>
         <td><%= game.awayteamscore %></td>
         <td><%= game.gamedate %></td>
-        <td><%= link_to 'Show', game %></td>
-        <td><%= link_to 'Edit', edit_game_path(game) %></td>
-        <td><%= link_to 'Destroy', game, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to ("<i class='far fa-eye'></i>").html_safe, game %></td> 
+          <td><%= link_to ("<i class='fas fa-edit fa-sm'></i>").html_safe, edit_game_path(game) %></td>
+          <td><%= link_to ("<i class='fa fa-trash fa-sm'></i>").html_safe, game, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>

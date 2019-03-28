@@ -18,6 +18,19 @@
  @import "reports_kit/application";
 
 // body { padding-top: 40px; }
+body { 
+    background: image-url('cream_dust.png') repeat 0 0;
+  //   background: image-url('soccer.jpg') no-repeat center center;
+		// background-size: cover;  /* For a full size background image */
+}
+.jumbotron  {
+	background: image-url('soccer.jpg') no-repeat center center;
+	background-size: cover;
+	opacity: 0.9;
+	color: white;
+} 
+
 footer { margin-top: 40px; }
 table, td, th { vertical-align: middle; border: none; }
 th { border-bottom: 1px solid #DDD; }
+

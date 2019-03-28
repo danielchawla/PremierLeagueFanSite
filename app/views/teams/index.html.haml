@@ -1,3 +1,11 @@
+.jumbotron 
+  %h1.display-4 The Premier League Fansite!
+  %p.lead The fan site for the die-hard Premier League enthusiasts.
+  %hr.my-4/
+  / %p It uses utility classes for typography and spacing to space content out within the larger container.
+  %p.lead
+    %a.btn.btn-primary.btn-lg{:href => "/games", :role => "button"} See the latest games
+
 %h1 Teams
 .table-responsive
   %table.table.table-striped
@@ -20,11 +28,11 @@
           %td
             %span.input-group-addon $
             = number_with_delimiter(team.budget, :delimiter => ',')
-          %td= link_to 'Read', team_articles_path(team)
+          %td= link_to ("<i class='fas fa-book-reader'></i>").html_safe, team_articles_path(team)
           %td= link_to 'Team Players', team_players_path(team)
-          %td= link_to 'Show', team
-          %td= link_to 'Edit ', edit_team_path(team)
-          %td= link_to 'Destroy', team, method: :delete, data: { confirm: 'Are you sure?' }
+          %td= link_to ("<i class='far fa-eye'></i>").html_safe, team
+          %td= link_to ("<i class='fas fa-edit fa-sm'></i>").html_safe, edit_team_path(team)
+          %td= link_to ("<i class='fa fa-trash fa-sm'></i>").html_safe, team, method: :delete, data: { confirm: 'Are you sure?' }
 %br/
 = link_to 'New Team', new_team_path, class: 'btn btn-primary'
 = link_to 'See Games Played', games_path, class: 'btn btn-primary'
