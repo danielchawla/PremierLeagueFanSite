@@ -14,8 +14,8 @@
 //= require activestorage
 //= require turbolinks
 //= require jquery3
+//= require reports_kit/application
 //= require popper
 //= require bootstrap
-//= require reports_kit/application
 //= require_tree .
 

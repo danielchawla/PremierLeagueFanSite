@@ -1,0 +1,32 @@
+%h1 Teams
+.table-responsive
+  %table.table.table-striped
+    %thead
+      %tr
+        %th{:scope => "col"} Short Name
+        %th{:scope => "col"} Full Name
+        %th{:scope => "col"} Year Founded
+        %th{:scope => "col"} Budget
+        %th{:scope => "col"} Team Articles
+        %th{:scope => "col"} Team Players
+        %th{:scope => "col"} Links
+        %th{:colspan => "2", :scope => "col"}
+    %tbody
+      - @teams.each do |team|
+        %tr
+          %td= team.shortname
+          %td= team.fullname.truncate(30)
+          %td= team.yearfounded
+          %td
+            %span.input-group-addon $
+            = number_with_delimiter(team.budget, :delimiter => ',')
+          %td= link_to 'Read', team_articles_path(team)
+          %td= link_to 'Team Players', team_players_path(team)
+          %td= link_to 'Show', team
+          %td= link_to 'Edit ', edit_team_path(team)
+          %td= link_to 'Destroy', team, method: :delete, data: { confirm: 'Are you sure?' }
+%br/
+= link_to 'New Team', new_team_path, class: 'btn btn-primary'
+= link_to 'See Games Played', games_path, class: 'btn btn-primary'
+%br/
+

@@ -19,10 +19,10 @@
   <tbody>
     <% @games.each do |game| %>
       <tr>
-        <td><%= game.hometeam.shortname %></td>
-        <td><%= game.awayteam.shortname %></td>
+        <td><%= game.hometeam.fullname.truncate(15) %></td>
+        <td><%= game.awayteam.fullname.truncate(15) %></td>
         <% if game.winningteam %>
-          <td><%= game.winningteam.shortname %></td>
+          <td><%= game.winningteam.fullname.truncate(15) %></td>
         <% else %>
           <td><%= 'None' %></td>
         <% end %>
@@ -40,3 +40,29 @@
 <br>
 
 <%= link_to 'New Game', new_game_path, class: 'btn btn-primary' %>
+
+<br>
+<br>
+<h3>Game Reports</h3>
+<br>
+<div class="container">
+  <div class="row">
+    <div class="col-sm">
+      <td><%= button_to '1. Teams that played as home teams in every game', {:controller => "query", :action => "game", :allhome => true } , :method=>:post, class: 'btn btn-outline-success btn-block'  %></td>
+    <br>
+      <td><%= button_to '3. Coaches, managers, and owners for every games', {:controller => "query", :action => "game", :cmo => true } , :method=>:post, class: 'btn btn-outline-secondary btn-block'  %></td>
+      <br>
+      <td><%= button_to '5. Home team with most goals in a game', {:controller => "query", :action => "game", :maxhome => true } , :method=>:post, class: 'btn btn-outline-success btn-block'  %></td>
+      <br>
+      <td><%= button_to '7. Overall team with most goals in a game', {:controller => "query", :action => "game", :maxall => true } , :method=>:post, class: 'btn btn-outline-secondary btn-block'  %></td>
+    </div>
+    <div class="col-sm">
+      <td><%= button_to '2. Teams that played as away teams in every game', {:controller => "query", :action => "game", :allaway => true } , :method=>:post, class: 'btn btn-outline-info btn-block'  %></td>
+      <br>
+    <td><%= button_to '4. Number of games players were in', {:controller => "query", :action => "game", :countgame => true } , :method=>:post, class: 'btn btn-outline-danger btn-block'  %></td>
+     <br>
+      <td><%= button_to '6. Away team with most goals in a game', {:controller => "query", :action => "game", :maxaway => true } , :method=>:post, class: 'btn btn-outline-info btn-block'  %></td>
+    </div>
+  </div>
+</div>
+
