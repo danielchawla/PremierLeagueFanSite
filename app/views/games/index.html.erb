@@ -8,8 +8,8 @@
       <th>Home Team </th>
       <th>Away Team </th>
       <th>Winning Team </th>
-      <th>Away Score </th>
       <th>Home Score </th>
+      <th>Away Score </th>
       <th>Game Date </th>
       <th>Links </th>
       <th colspan="2"></th>
@@ -19,19 +19,19 @@
   <tbody>
     <% @games.each do |game| %>
       <tr>
-        <td><%= game.hometeam.shortname %></td>
-        <td><%= game.awayteam.shortname %></td>
+        <td><%= game.hometeam.fullname.truncate(15) %></td>
+        <td><%= game.awayteam.fullname.truncate(15) %></td>
         <% if game.winningteam %>
-          <td><%= game.winningteam.shortname %></td>
+          <td><%= game.winningteam.fullname.truncate(15) %></td>
         <% else %>
           <td><%= 'None' %></td>
         <% end %>
-        <td><%= game.awayteamscore %></td>
         <td><%= game.hometeamscore %></td>
+        <td><%= game.awayteamscore %></td>
         <td><%= game.gamedate %></td>
-        <td><%= link_to 'Show', game %></td>
-        <td><%= link_to 'Edit', edit_game_path(game) %></td>
-        <td><%= link_to 'Destroy', game, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to ("<i class='far fa-eye'></i>").html_safe, game %></td> 
+          <td><%= link_to ("<i class='fas fa-edit fa-sm'></i>").html_safe, edit_game_path(game) %></td>
+          <td><%= link_to ("<i class='fa fa-trash fa-sm'></i>").html_safe, game, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -40,3 +40,34 @@
 <br>
 
 <%= link_to 'New Game', new_game_path, class: 'btn btn-primary' %>
+
+<br>
+<br>
+<h3>Game Reports</h3>
+<br>
+<div class="container">
+  <div class="row">
+    <div class="col-sm">
+      <td><%= button_to 'Teams that played as home teams in every game', {:controller => "query", :action => "game", :allhome => true } , :method=>:post, class: 'btn btn-outline-success btn-block'  %></td>
+    <br>
+      <td><%= button_to 'Coaches, managers, and owners for every games', {:controller => "query", :action => "game", :cmo => true } , :method=>:post, class: 'btn btn-outline-dark btn-block'  %></td>
+      <br>
+      <td><%= button_to 'Home team with most goals in a game', {:controller => "query", :action => "game", :maxhome => true } , :method=>:post, class: 'btn btn-outline-success btn-block'  %></td>
+      <br>
+      <td><%= button_to 'Overall team with most goals in a game', {:controller => "query", :action => "game", :maxall => true } , :method=>:post, class: 'btn btn-outline-dark btn-block'  %></td>
+      <br>
+      <td><%= button_to 'Team with the most wins overall', {:controller => "query", :action => "game", :mostwins => true } , :method=>:post, class: 'btn btn-outline-success btn-block'  %></td>
+      <br>
+    </div>
+    <div class="col-sm">
+      <td><%= button_to 'Teams that played as away teams in every game', {:controller => "query", :action => "game", :allaway => true } , :method=>:post, class: 'btn btn-outline-info btn-block'  %></td>
+      <br>
+    <td><%= button_to 'Number of games players were in', {:controller => "query", :action => "game", :countgame => true } , :method=>:post, class: 'btn btn-outline-danger btn-block'  %></td>
+     <br>
+      <td><%= button_to 'Away team with most goals in a game', {:controller => "query", :action => "game", :maxaway => true } , :method=>:post, class: 'btn btn-outline-info btn-block'  %></td>
+      <br>
+    <td><%= button_to 'Number of wins for each team', {:controller => "query", :action => "game", :teamwins => true } , :method=>:post, class: 'btn btn-outline-danger btn-block'  %></td>
+    </div>
+  </div>
+</div>
+

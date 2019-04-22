@@ -11,9 +11,9 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= form.label :body %>
-    <%= form.text_area :body %>
+  <div class="form-group">
+    <%= form.label 'Comment' %>
+    <%= form.text_area :body, class: "form-control", rows: 3 %>
   </div>
   <%= form.hidden_field :article_id %>
 

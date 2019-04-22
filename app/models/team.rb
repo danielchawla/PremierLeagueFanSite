@@ -14,4 +14,5 @@ class Team < ApplicationRecord
    def full_name
   	"#{fullname}"
   end
+  
 end

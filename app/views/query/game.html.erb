@@ -1,0 +1,29 @@
+<h3>Game Report</h3>
+  
+<!--   <form class="form-inline my-2 my-lg-0">
+    <input class="form-control mr-sm-2" type="search" placeholder="Query (not working yet)" aria-label="Search">
+    <button class="btn btn-outline-success my-2 my-sm-0" href="/" type="submit">Search</button>
+  </form> -->
+<table class="table table-dark">
+  <thead>
+    <tr>
+      <% @headers.each do |key| %>
+        <th scope="col">
+          <%= key %>
+        </th>
+      <% end %>
+    </tr>
+  </thead>
+  <tbody>
+    <% @results.each do |result| %>
+      <tr>
+        <% @headers.each do |key| %>
+          <td>
+            <%= result[key] %>
+          </td>
+        <% end %>
+      </tr>
+    <% end %>
+  </tbody>  
+</table>
+<br>

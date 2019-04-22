@@ -1,14 +1,64 @@
 class QueryController < ApplicationController
 	before_action :authenticate_app_user!
-	# before_action :only => [:search] do
- #    if (! (current_app_user && current_app_user.admin) )
- #      flash[:alert] = 'Only admins can access that functionality.' 
- #      redirect_to(root_path)
- #    end
- #  end
+	before_action only: [:search, :index] do
+    if (! (current_app_user && current_app_user.admin) )
+      flash[:alert] = 'Only admins can access that functionality.' 
+      redirect_to(root_path)
+    end
+  end
 
  	def index
  	end
+
+  def game
+    @sql = ''
+    if !params[:countgame].blank?
+      @sql = @sql + 'SELECT p.id, count(g.id)  AS gamesplayed ' +
+              'FROM games g, players p, teams t ' + 
+              'WHERE g.hometeam_id = t.id AND ' +
+                't.id = p.team_id ' +
+              'GROUP BY p.id ' +
+              'UNION ' +
+              'SELECT p.id, count(g.id) ' +
+              'FROM games g, players p, teams t ' +
+              'WHERE g.awayteam_id = t.id AND ' +
+                't.id = p.team_id ' +
+              'GROUP BY p.id' 
+    elsif !params[:allhome].blank?
+      @sql = @sql + 'SELECT DISTINCT id, fullname FROM teams te WHERE NOT EXISTS (SELECT g.hometeam_id FROM games g EXCEPT SELECT xyz.id FROM teams xyz WHERE xyz.id= te.id)' 
+    elsif !params[:allaway].blank?
+      @sql = @sql + 'SELECT DISTINCT id, fullname FROM teams te WHERE NOT EXISTS (SELECT g.awayteam_id FROM games g EXCEPT SELECT xyz.id FROM teams xyz WHERE xyz.id= te.id)' 
+    elsif !params[:cmo].blank?
+      @sql = @sql + 'SELECT g.id as GameID, c.firstname as CoachFname, c.lastname as CoachLname, m.firstname as ManagerFname, m.lastname as ManagerLname, o.firstname as OwnerFname, o.lastname as OwnerLname FROM games g, teams t, coaches c, managers m, owners o WHERE g.hometeam_id = t.id AND t.id = c.team_id AND t.id = m.team_id AND t.id = o.team_id UNION SELECT g.id as GameID, c.firstname as CoachFname, c.lastname as CoachLname, m.firstname as ManagerFname, m.lastname as ManagerLname, o.firstname as OwnerFname, o.lastname as OwnerLname FROM games g, teams t, coaches c, managers m, owners o WHERE g.awayteam_id = t.id AND t.id = c.team_id AND t.id = m.team_id AND t.id = o.team_id '
+    elsif !params[:maxhome].blank?
+      @sql = @sql + 'SELECT DISTINCT t.fullname FROM teams t, games g WHERE t.id = g.hometeam_id AND g.hometeamscore = (SELECT max(g.hometeamscore) FROM games g)'
+    elsif !params[:maxaway].blank?
+      @sql = @sql + 'SELECT DISTINCT t.fullname FROM teams t, games g WHERE t.id = g.awayteam_id AND g.awayteamscore = (SELECT max(g.awayteamscore) FROM games g)'
+    elsif !params[:maxall].blank?
+      @sql = @sql + 'SELECT DISTINCT t.fullname FROM teams t, games g WHERE (g.hometeam_id = t.id AND g.hometeamscore = ' +
+          '(SELECT max(max(g.awayteamscore),max(g.hometeamscore)) FROM games g)) ' +
+          ' OR (g.awayteam_id = t.id AND g.awayteamscore = ' +
+          ' (SELECT max(max(g.awayteamscore),max(g.hometeamscore)) FROM games g)) '
+    elsif !params[:teamwins].blank?
+      @sql = @sql + 'select t.fullname, count(*) AS wins from games g, teams t WHERE g.winningteam_id = t.id AND g.winningteam_id IS NOT NULL  GROUP BY g.winningteam_id HAVING count(*)  ORDER BY count(*) DESC'
+    elsif !params[:mostwins].blank?
+      @sql = @sql + 'select t.fullname, count(*) AS wins from games g, teams t WHERE g.winningteam_id = t.id AND g.winningteam_id IS NOT NULL  GROUP BY g.winningteam_id HAVING count(*)  ORDER BY count(*) DESC LIMIT 1'
+    end
+    begin
+    @results = ActiveRecord::Base.connection.execute(@sql)
+     if @results[0]
+      @keys = @results[0].keys
+      size = @results[0].keys.size / 2
+      @headers = @keys.slice(0,size)
+     else
+      @headers = ["No results"]
+      @results = [Results: 'None']
+     end
+    rescue ActiveRecord::StatementInvalid => e
+      redirect_to(games_path, alert: e.to_s) and return
+    end
+
+  end
 
   def search
   	
@@ -24,9 +74,6 @@ class QueryController < ApplicationController
   			@sql = @select + " " + @from 
   			if ( !params[:where].blank? )
   				@sql = @sql + " WHERE " + params[:where] 
-  				## TODO: test "quotes"
-  				##
-  				##
 				end 
   		end
   	# if using division query interface
@@ -55,7 +102,6 @@ class QueryController < ApplicationController
 				# (SELECT xyz.y FROM @divisor as xyz WHERE xyz.x = @d1.x ) 
 				# )  			
 			end 
-		
   	# if query is inputted through search bar
   	elsif !params[:search].blank?  
     	@sql = params[:search]

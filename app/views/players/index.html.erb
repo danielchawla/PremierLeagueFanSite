@@ -28,9 +28,9 @@
         <td><%= player.yearsofexperience %></td>
         <td><span class="input-group-addon">$</span><%= number_with_delimiter(player.salary, :delimiter => ',') %></td>
         <td><%= player.team.fullname %></td>
-        <td><%= link_to 'Show', player_path(player) %></td>
-        <td><%= link_to 'Edit', edit_player_path(player) %></td> 
-        <td><%= link_to 'Destroy', player, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to ("<i class='far fa-eye'></i>").html_safe, player_path(player) %></td>
+        <td><%= link_to ("<i class='fas fa-edit fa-sm'></i>").html_safe, edit_player_path(player) %></td> 
+        <td><%= link_to ("<i class='fa fa-trash fa-sm'></i>").html_safe, player, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
       <% end %> 
     <% end %>

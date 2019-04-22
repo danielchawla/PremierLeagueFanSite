@@ -1,5 +1,5 @@
 class Article < ApplicationRecord
-  # self.primary_keys = :title, :team
+  # self.primary_keys = :title, :team_id
   belongs_to :team
   has_many :votes, dependent: :destroy
   has_many :comments, dependent: :destroy
