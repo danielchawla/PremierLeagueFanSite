@@ -394,9 +394,63 @@ t20.managers.create(firstname: 'Nuno', lastname: 'Esperito Santo')
 
 #   Games to test division 
 Game.create([
-	{awayteamscore: 2, hometeamscore: 1, gamedate: '05-12-2018', hometeam_id: t1.id, awayteam_id: t2.id, winningteam_id: t2.id},
+	{awayteamscore: 2, hometeamscore: 1, gamedate: '12-05-2018', hometeam_id: t1.id, awayteam_id: t2.id, winningteam_id: t2.id},
 	{awayteamscore: 3, hometeamscore: 3, gamedate: '06-01-2018', hometeam_id: t1.id, awayteam_id: t6.id, winningteam_id: nil}, # tie game so no winning team
-	{awayteamscore: 1, hometeamscore: 0, gamedate: '06-01-2018', hometeam_id: t1.id, awayteam_id: t4.id, winningteam_id: t4.id} 
+	{awayteamscore: 1, hometeamscore: 0, gamedate: '01-06-2018', hometeam_id: t1.id, awayteam_id: t4.id, winningteam_id: t4.id},
+	{awayteamscore: 0, hometeamscore: 1, gamedate: '23-02-2019', hometeam_id: t1.id, awayteam_id: t14.id, winningteam_id: t1.id},
+	{awayteamscore: 14, hometeamscore: 0, gamedate: '05-11-2017', hometeam_id: t3.id, awayteam_id: t8.id, winningteam_id: t8.id},
+	{awayteamscore: 0, hometeamscore: 17, gamedate: '01-01-2019', hometeam_id: t2.id, awayteam_id: t6.id, winningteam_id: t2.id},
+	{awayteamscore: 1, hometeamscore: 0, gamedate: '01-04-2019', hometeam_id: t1.id, awayteam_id: t9.id, winningteam_id: t9.id},
+	{awayteamscore: 1, hometeamscore: 3, gamedate: '01-04-2019', hometeam_id: t1.id, awayteam_id: t10.id, winningteam_id: t1.id},
+	{awayteamscore: 5, hometeamscore: 3, gamedate: '01-04-2019', hometeam_id: t1.id, awayteam_id: t12.id, winningteam_id: t12.id},
+	{awayteamscore: 13, hometeamscore: 0, gamedate: '01-04-2019', hometeam_id: t13.id, awayteam_id: t7.id, winningteam_id: t7.id},
+	{awayteamscore: 0, hometeamscore: 14, gamedate: '01-04-2019', hometeam_id: t14.id, awayteam_id: t7.id, winningteam_id: t14.id},
+	{awayteamscore: 14, hometeamscore: 2, gamedate: '01-04-2019', hometeam_id: t15.id, awayteam_id: t14.id, winningteam_id: t14.id},
+	{awayteamscore: 12, hometeamscore: 14, gamedate: '20-04-2019', hometeam_id: t16.id, awayteam_id: t14.id, winningteam_id: t16.id},
+	{awayteamscore: 12, hometeamscore: 13, gamedate: '21-04-2019', hometeam_id: t14.id, awayteam_id: t17.id, winningteam_id: t14.id},
+	{awayteamscore: 12, hometeamscore: 11, gamedate: '04-04-2019', hometeam_id: t12.id, awayteam_id: t19.id, winningteam_id: t19.id},
+	{awayteamscore: 1, hometeamscore: 1, gamedate: '01-04-2019', hometeam_id: t20.id, awayteam_id: t12.id, winningteam_id: nil},
+	{awayteamscore: 0, hometeamscore: 2, gamedate: '17-03-2019', hometeam_id: t2.id, awayteam_id: t7.id, winningteam_id: t2.id},
+	{awayteamscore: 0, hometeamscore: 2, gamedate: '10-03-2019', hometeam_id: t1.id, awayteam_id: t14.id, winningteam_id: t1.id},
+	{awayteamscore: 2, hometeamscore: 4, gamedate: '10-03-2019', hometeam_id: t12.id, awayteam_id: t5.id, winningteam_id: t12.id},
+	{awayteamscore: 1, hometeamscore: 3, gamedate: '09-03-2019', hometeam_id: t13.id, awayteam_id: t18.id, winningteam_id: t13.id},
+	{awayteamscore: 2, hometeamscore: 1, gamedate: '09-03-2019', hometeam_id: t8.id, awayteam_id: t4.id, winningteam_id: t4.id},
+	{awayteamscore: 1, hometeamscore: 1, gamedate: '02-03-2019', hometeam_id: t17.id, awayteam_id: t1.id, winningteam_id: nil},
+	{awayteamscore: 1, hometeamscore: 2, gamedate: '23-02-2019', hometeam_id: t5.id, awayteam_id: t17.id, winningteam_id: t5.id},
+	{awayteamscore: 0, hometeamscore: 6, gamedate: '10-02-2019', hometeam_id: t13.id, awayteam_id: t7.id, winningteam_id: t13.id},
+	{awayteamscore: 1, hometeamscore: 2, gamedate: '29-01-2019', hometeam_id: t1.id, awayteam_id: t6.id, winningteam_id: t1.id},
+	{awayteamscore: 0, hometeamscore: 0, gamedate: '12-01-2019', hometeam_id: t6.id, awayteam_id: t10.id, winningteam_id: nil},
+	{awayteamscore: 1, hometeamscore: 0, gamedate: '12-01-2019', hometeam_id: t4.id, awayteam_id: t12.id, winningteam_id: t12.id},
+	{awayteamscore: 2, hometeamscore: 0, gamedate: '02-01-2019', hometeam_id: t20.id, awayteam_id: t8.id, winningteam_id: t8.id},
+	{awayteamscore: 0, hometeamscore: 2, gamedate: '30-12-2018', hometeam_id: t5.id, awayteam_id: t19.id, winningteam_id: t5.id},
+
+	
+	{awayteamscore: 1, hometeamscore: 2, gamedate: '15-11-2019', hometeam_id: t2.id, awayteam_id: t1.id, winningteam_id: t1.id},
+	{awayteamscore: 1, hometeamscore: 2, gamedate: '15-11-2019', hometeam_id: t2.id, awayteam_id: t1.id, winningteam_id: t2.id},
+	{awayteamscore: 1, hometeamscore: 2, gamedate: '15-11-2019', hometeam_id: t3.id, awayteam_id: t2.id, winningteam_id: t2.id},
+	{awayteamscore: 1, hometeamscore: 2, gamedate: '15-11-2019', hometeam_id: t3.id, awayteam_id: t2.id, winningteam_id: t3.id},
+	{awayteamscore: 1, hometeamscore: 2, gamedate: '15-11-2019', hometeam_id: t4.id, awayteam_id: t3.id, winningteam_id: t3.id},
+	{awayteamscore: 1, hometeamscore: 2, gamedate: '15-11-2019', hometeam_id: t4.id, awayteam_id: t3.id, winningteam_id: t4.id},
+	{awayteamscore: 1, hometeamscore: 2, gamedate: '15-11-2019', hometeam_id: t5.id, awayteam_id: t4.id, winningteam_id: t4.id},
+	{awayteamscore: 1, hometeamscore: 2, gamedate: '15-11-2019', hometeam_id: t5.id, awayteam_id: t4.id, winningteam_id: t5.id},
+	{awayteamscore: 1, hometeamscore: 2, gamedate: '15-11-2019', hometeam_id: t6.id, awayteam_id: t5.id, winningteam_id: t5.id},
+	{awayteamscore: 1, hometeamscore: 2, gamedate: '15-11-2019', hometeam_id: t6.id, awayteam_id: t5.id, winningteam_id: t6.id},
+	{awayteamscore: 1, hometeamscore: 2, gamedate: '15-11-2019', hometeam_id: t7.id, awayteam_id: t1.id, winningteam_id: t1.id},
+	{awayteamscore: 1, hometeamscore: 2, gamedate: '15-11-2019', hometeam_id: t7.id, awayteam_id: t1.id, winningteam_id: t7.id},
+	{awayteamscore: 1, hometeamscore: 2, gamedate: '15-11-2019', hometeam_id: t8.id, awayteam_id: t7.id, winningteam_id: t7.id},
+	{awayteamscore: 1, hometeamscore: 2, gamedate: '15-11-2019', hometeam_id: t8.id, awayteam_id: t7.id, winningteam_id: t8.id},
+	{awayteamscore: 1, hometeamscore: 2, gamedate: '15-11-2019', hometeam_id: t9.id, awayteam_id: t6.id, winningteam_id: t6.id},
+	{awayteamscore: 1, hometeamscore: 2, gamedate: '15-11-2019', hometeam_id: t10.id, awayteam_id: t6.id, winningteam_id: t6.id},
+	{awayteamscore: 1, hometeamscore: 2, gamedate: '15-11-2019', hometeam_id: t11.id, awayteam_id: t5.id, winningteam_id: t5.id},
+	{awayteamscore: 1, hometeamscore: 2, gamedate: '15-11-2019', hometeam_id: t12.id, awayteam_id: t5.id, winningteam_id: t5.id},
+	{awayteamscore: 1, hometeamscore: 2, gamedate: '15-11-2019', hometeam_id: t13.id, awayteam_id: t4.id, winningteam_id: t4.id},
+	{awayteamscore: 1, hometeamscore: 2, gamedate: '15-11-2019', hometeam_id: t14.id, awayteam_id: t4.id, winningteam_id: t4.id},
+	{awayteamscore: 1, hometeamscore: 2, gamedate: '15-11-2019', hometeam_id: t15.id, awayteam_id: t3.id, winningteam_id: t3.id},
+	{awayteamscore: 1, hometeamscore: 2, gamedate: '15-11-2019', hometeam_id: t16.id, awayteam_id: t3.id, winningteam_id: t3.id},
+	{awayteamscore: 1, hometeamscore: 2, gamedate: '15-11-2019', hometeam_id: t17.id, awayteam_id: t2.id, winningteam_id: t2.id},
+	{awayteamscore: 1, hometeamscore: 2, gamedate: '15-11-2019', hometeam_id: t18.id, awayteam_id: t2.id, winningteam_id: t2.id},
+	{awayteamscore: 1, hometeamscore: 2, gamedate: '15-11-2019', hometeam_id: t19.id, awayteam_id: t1.id, winningteam_id: t1.id},
+	{awayteamscore: 1, hometeamscore: 2, gamedate: '15-11-2019', hometeam_id: t20.id, awayteam_id: t1.id, winningteam_id: t1.id}
 ]) # DON'T FORGET: add commas between each game entry. last one doesn't need it
 
 
@@ -425,6 +479,34 @@ a20 = t18.articles.create(title: 'Watford gets a new logo', articletext: 'Watfor
 a21 = t19.articles.create(title: 'West Ham United wins against Liverpool', articletext: 'On April 4th, West Ham United wins against Liverpool 12-11', timeposted: '2019-03-19 08:00:00')
 a22 = t20.articles.create(title: 'Wolverhampton Wanderers ties against Liverpool', articletext: 'On April 1st, Wolverhampton ties against Liverpool 1-1', timeposted: '2019-11-15 08:00:00')
 
+
+a23 = t2.articles.create(title: 'Everton loses to Arsenal', articletext: 'On October 13th, Everton lost 2-1 to Arsenal', timeposted: '2019-10-15 08:00:00')
+a24 = t2.articles.create(title: 'Everton wins against Arsenal', articletext: 'On October 13th, Everton wins 2-1 to Arsenal', timeposted: '2018-11-15 08:00:00')
+a25 = t3.articles.create(title: 'AFC Bournemouth loses to Everton', articletext: 'On October 13th, AFC Bournemouth lost 2-1 to Everton', timeposted: '2019-11-15 08:00:00')
+a26 = t3.articles.create(title: 'AFC Bournemouth wins against Everton', articletext: 'On October 13th, AFC Bournemouth wins 2-1 to Everton', timeposted: '2019-11-15 08:00:00')
+a27 = t4.articles.create(title: 'Brighton and Hove Albion loses to AFC Bournemouth', articletext: 'On October 13th, Brighton and Hove Albion lost 2-1 to AFC Bournemouth', timeposted: '2019-11-15 08:00:00')
+a28 = t4.articles.create(title: 'Brighton and Hove Albion wins against AFC Bournemouth', articletext: 'On October 13th, Brighton and Hove Albion wins 2-1 to AFC Bournemouth', timeposted: '2019-11-15 08:00:00')
+a29 = t5.articles.create(title: 'Burnley loses to Brighton and Hove Albion', articletext: 'On October 13th, Burnley lost 2-1 to Brighton and Hove Albion', timeposted: '2019-11-15 08:00:00')
+a30 = t5.articles.create(title: 'Burnley wins against Brighton and Hove Albion', articletext: 'On October 13th, Burnley wins 2-1 to Brighton and Hove Albion', timeposted: '2019-11-15 08:00:00')
+a31 = t6.articles.create(title: 'Cardiff City loses to Burnley', articletext: 'On October 13th, Cardiff City lost 2-1 to Burnley', timeposted: '2019-11-15 08:00:00')
+a32 = t6.articles.create(title: 'Cardiff City wins against Burnley', articletext: 'On October 13th, Cardiff City wins 2-1 to Burnley', timeposted: '2019-11-15 08:00:00')
+a33 = t7.articles.create(title: 'Chelsea loses to Arsenal', articletext: 'On October 13th, Chelsea lost 2-1 to Arsenal', timeposted: '2019-11-15 08:00:00')
+a34 = t7.articles.create(title: 'Chelsea wins against Arsenal', articletext: 'On October 13th, Chelsea wins 2-1 to Arsenal', timeposted: '2019-11-15 08:00:00')
+a35 = t8.articles.create(title: 'Crystal Palace loses to Chelsea', articletext: 'On October 13th, Crystal Palace lost 2-1 to Chelsea', timeposted: '2019-11-15 08:00:00')
+a36 = t8.articles.create(title: 'Crystal Palace wins against Chelsea', articletext: 'On October 13th, Crystal Palace wins 2-1 to Chelsea', timeposted: '2019-11-15 08:00:00')
+a37 = t9.articles.create(title: 'Fulham loses to Cardiff City', articletext: 'On October 13th, Fulham lost 2-1 to Cardiff City', timeposted: '2019-11-15 08:00:00')
+a38 = t10.articles.create(title: 'Huddersfield Town loses to Cardiff City', articletext: 'On October 13th, Huddersfield Town lost 2-1 to Cardiff City', timeposted: '2019-11-15 08:00:00')
+a39 = t11.articles.create(title: 'Leicester City loses to Burnley', articletext: 'On October 13th, Leicester City lost 2-1 to Burnley', timeposted: '2019-11-15 08:00:00')
+a40 = t12.articles.create(title: 'Liverpool loses to Burnley', articletext: 'On October 13th, Liverpool lost 2-1 to Burnley', timeposted: '2019-11-15 08:00:00')
+a41 = t13.articles.create(title: 'Manchester City loses to Brighton and Hove Albion', articletext: 'On October 13th, Manchester City lost 2-1 to Brighton and Hove Albion', timeposted: '2019-11-15 08:00:00')
+a42 = t14.articles.create(title: 'Manchester United loses to Brighton and Hove Albion', articletext: 'On October 13th, Manchester United lost 2-1 to Brighton and Hove Albion', timeposted: '2019-11-15 08:00:00')
+a43 = t15.articles.create(title: 'Newcastle United loses to AFC Bournemouth', articletext: 'On October 13th, Newcastle United lost 2-1 to AFC Bournemouth', timeposted: '2019-11-15 08:00:00')
+a44 = t16.articles.create(title: 'Southampton loses to AFC Bournemouth', articletext: 'On October 13th, Southampton lost 2-1 to AFC Bournemouth', timeposted: '2019-11-15 08:00:00')
+a45 = t17.articles.create(title: 'Tottenham Hotspur loses to Everton', articletext: 'On October 13th, Tottenham Hotspur lost 2-1 to Everton', timeposted: '2019-11-15 08:00:00')
+a46 = t18.articles.create(title: 'Watford loses to Everton', articletext: 'On October 13th, Watford lost 2-1 to Everton', timeposted: '2019-11-15 08:00:00')
+a47 = t19.articles.create(title: 'West Ham United loses to Arsenal', articletext: 'On October 13th, West Ham United lost 2-1 to Arsenal', timeposted: '2019-11-15 08:00:00')
+a48 = t20.articles.create(title: 'Wolverhampton Wanderers loses to Arsenal', articletext: 'On October 13th, Wolverhampton Wanderers lost 2-1 to Arsenal', timeposted: '2019-11-15 08:00:00')
+
 #   User creation
 u1 = AppUser.create! :email => 'admin@1.com', :password => '123456', :password_confirmation => '123456', :admin => true
 u2 = AppUser.create! :email => 'john@2.com', :password => '123456', :password_confirmation => '123456', :admin => false
@@ -433,7 +515,7 @@ u3 = AppUser.create! :email => 'sarah@2.com', :password => '123456', :password_c
 #   Comment creation 
 # Note: this is a many to many relationship
 Comment.create([
-	{body: 'Go Arsenal!', article_id: t2.id, app_user_id: u2.id},
+	{body: 'Go Arsenal!', article_id: a1.id, app_user_id: u2.id},
 	{body: 'So sad :\'(', article_id: t2.id, app_user_id: u3.id},
 	{body: 'Go Everton!', article_id: t1.id, app_user_id: u3.id},
 	{body: 'So sad :\'(', article_id: t1.id, app_user_id: u2.id}
