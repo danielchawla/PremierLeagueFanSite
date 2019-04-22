@@ -169,7 +169,6 @@ t9.players.create(firstname: 'Floyd', lastname: 'Ayite', nationality: 'Togo', po
 t9.players.create(firstname: 'Aleksandar', lastname: 'Mitrovic', nationality: 'Serbia', position: 'Forward', yearsofexperience: '2', salary: '150000') 
 t9.players.create(firstname: 'Luciano', lastname: 'Vietto', nationality: 'Argentina', position: 'Forward', yearsofexperience: '2', salary: '210000') 
 
-
 #	HUD
 t10.players.create(firstname: 'Jonas', lastname: 'Lossi', nationality: 'Denmark', position: 'Goalkeeper', yearsofexperience: '2', salary: '550000') 
 t10.players.create(firstname: 'Ben', lastname: 'Hamer', nationality: 'England', position: 'Goalkeeper', yearsofexperience: '2', salary: '450000') 
@@ -453,6 +452,7 @@ Game.create([
 # 	{awayteamscore: 1, hometeamscore: 2, gamedate: '15-11-2019', hometeam_id: t18.id, awayteam_id: t2.id, winningteam_id: t2.id},
 # 	{awayteamscore: 1, hometeamscore: 2, gamedate: '15-11-2019', hometeam_id: t19.id, awayteam_id: t1.id, winningteam_id: t1.id},
 # 	{awayteamscore: 1, hometeamscore: 2, gamedate: '15-11-2019', hometeam_id: t20.id, awayteam_id: t1.id, winningteam_id: t1.id},
+# 	{awayteamscore: 1, hometeamscore: 2, gamedate: '15-11-2019', hometeam_id: t20.id, awayteam_id: t1.id, winningteam_id: t1.id},
 # 	{awayteamscore: 0, hometeamscore: 1, gamedate: '23-02-2019', hometeam_id: t1.id, awayteam_id: t14.id, winningteam_id: t1.id}
 # ]) # DON'T FORGET: add commas between each game entry. last one doesn't need it
 
@@ -508,6 +508,33 @@ a46 = t18.articles.create(title: 'Watford loses to Everton', articletext: 'On Oc
 a47 = t19.articles.create(title: 'West Ham United loses to Arsenal', articletext: 'On October 28th, West Ham United lost 2-1 to Arsenal', timeposted: '2019-11-15 08:00:00')
 a48 = t20.articles.create(title: 'Wolverhampton Wanderers loses to Arsenal', articletext: 'On October 29th, Wolverhampton Wanderers lost 2-1 to Arsenal', timeposted: '2019-11-15 08:00:00')
 
+
+a23 = t2.articles.create(title: 'Everton loses to Arsenal', articletext: 'On October 13th, Everton lost 2-1 to Arsenal', timeposted: '2019-10-15 08:00:00')
+a24 = t2.articles.create(title: 'Everton wins against Arsenal', articletext: 'On October 13th, Everton wins 2-1 to Arsenal', timeposted: '2018-11-15 08:00:00')
+a25 = t3.articles.create(title: 'AFC Bournemouth loses to Everton', articletext: 'On October 13th, AFC Bournemouth lost 2-1 to Everton', timeposted: '2019-11-15 08:00:00')
+a26 = t3.articles.create(title: 'AFC Bournemouth wins against Everton', articletext: 'On October 13th, AFC Bournemouth wins 2-1 to Everton', timeposted: '2019-11-15 08:00:00')
+a27 = t4.articles.create(title: 'Brighton and Hove Albion loses to AFC Bournemouth', articletext: 'On October 13th, Brighton and Hove Albion lost 2-1 to AFC Bournemouth', timeposted: '2019-11-15 08:00:00')
+a28 = t4.articles.create(title: 'Brighton and Hove Albion wins against AFC Bournemouth', articletext: 'On October 13th, Brighton and Hove Albion wins 2-1 to AFC Bournemouth', timeposted: '2019-11-15 08:00:00')
+a29 = t5.articles.create(title: 'Burnley loses to Brighton and Hove Albion', articletext: 'On October 13th, Burnley lost 2-1 to Brighton and Hove Albion', timeposted: '2019-11-15 08:00:00')
+a30 = t5.articles.create(title: 'Burnley wins against Brighton and Hove Albion', articletext: 'On October 13th, Burnley wins 2-1 to Brighton and Hove Albion', timeposted: '2019-11-15 08:00:00')
+a31 = t6.articles.create(title: 'Cardiff City loses to Burnley', articletext: 'On October 13th, Cardiff City lost 2-1 to Burnley', timeposted: '2019-11-15 08:00:00')
+a32 = t6.articles.create(title: 'Cardiff City wins against Burnley', articletext: 'On October 13th, Cardiff City wins 2-1 to Burnley', timeposted: '2019-11-15 08:00:00')
+a33 = t7.articles.create(title: 'Chelsea loses to Arsenal', articletext: 'On October 13th, Chelsea lost 2-1 to Arsenal', timeposted: '2019-11-15 08:00:00')
+a34 = t7.articles.create(title: 'Chelsea wins against Arsenal', articletext: 'On October 13th, Chelsea wins 2-1 to Arsenal', timeposted: '2019-11-15 08:00:00')
+a35 = t8.articles.create(title: 'Crystal Palace loses to Chelsea', articletext: 'On October 13th, Crystal Palace lost 2-1 to Chelsea', timeposted: '2019-11-15 08:00:00')
+a36 = t8.articles.create(title: 'Crystal Palace wins against Chelsea', articletext: 'On October 13th, Crystal Palace wins 2-1 to Chelsea', timeposted: '2019-11-15 08:00:00')
+a37 = t9.articles.create(title: 'Fulham loses to Cardiff City', articletext: 'On October 13th, Fulham lost 2-1 to Cardiff City', timeposted: '2019-11-15 08:00:00')
+a38 = t10.articles.create(title: 'Huddersfield Town loses to Cardiff City', articletext: 'On October 13th, Huddersfield Town lost 2-1 to Cardiff City', timeposted: '2019-11-15 08:00:00')
+a39 = t11.articles.create(title: 'Leicester City loses to Burnley', articletext: 'On October 13th, Leicester City lost 2-1 to Burnley', timeposted: '2019-11-15 08:00:00')
+a40 = t12.articles.create(title: 'Liverpool loses to Burnley', articletext: 'On October 13th, Liverpool lost 2-1 to Burnley', timeposted: '2019-11-15 08:00:00')
+a41 = t13.articles.create(title: 'Manchester City loses to Brighton and Hove Albion', articletext: 'On October 13th, Manchester City lost 2-1 to Brighton and Hove Albion', timeposted: '2019-11-15 08:00:00')
+a42 = t14.articles.create(title: 'Manchester United loses to Brighton and Hove Albion', articletext: 'On October 13th, Manchester United lost 2-1 to Brighton and Hove Albion', timeposted: '2019-11-15 08:00:00')
+a43 = t15.articles.create(title: 'Newcastle United loses to AFC Bournemouth', articletext: 'On October 13th, Newcastle United lost 2-1 to AFC Bournemouth', timeposted: '2019-11-15 08:00:00')
+a44 = t16.articles.create(title: 'Southampton loses to AFC Bournemouth', articletext: 'On October 13th, Southampton lost 2-1 to AFC Bournemouth', timeposted: '2019-11-15 08:00:00')
+a45 = t17.articles.create(title: 'Tottenham Hotspur loses to Everton', articletext: 'On October 13th, Tottenham Hotspur lost 2-1 to Everton', timeposted: '2019-11-15 08:00:00')
+a46 = t18.articles.create(title: 'Watford loses to Everton', articletext: 'On October 13th, Watford lost 2-1 to Everton', timeposted: '2019-11-15 08:00:00')
+a47 = t19.articles.create(title: 'West Ham United loses to Arsenal', articletext: 'On October 13th, West Ham United lost 2-1 to Arsenal', timeposted: '2019-11-15 08:00:00')
+a48 = t20.articles.create(title: 'Wolverhampton Wanderers loses to Arsenal', articletext: 'On October 13th, Wolverhampton Wanderers lost 2-1 to Arsenal', timeposted: '2019-11-15 08:00:00')
 
 #   User creation
 u1 = AppUser.create! :email => 'admin@1.com', :password => '123456', :password_confirmation => '123456', :admin => true
